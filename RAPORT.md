@@ -58,9 +58,9 @@ Nu există framework-uri, biblioteci sau dependențe pentru rulare. Linkurile, a
 
 Singurul script, `js/theme.js`, alege inițial tema sistemului, schimbă tema la apăsarea butonului și păstrează alegerea în `localStorage`. Dacă stocarea este indisponibilă, schimbarea temei continuă să funcționeze pe pagina curentă. Fără JavaScript, CSS aplică tema sistemului.
 
-Formularul are câmpuri pentru poreclă, email, titlu, platformă, an opțional și motiv. Browserul verifică obligația completării, formatul emailului, lungimile textelor, un titlu care nu conține doar spații și un an întreg între 1970 și 2026. Checkboxul obligatoriu confirmă caracterul demonstrativ. `:user-invalid` oferă stiluri pentru erori.
+Formularul are câmpuri pentru poreclă, email, titlu, platformă, an opțional și motiv. Browserul verifică obligația completării, formatul emailului, lungimile textelor, un titlu care nu conține doar spații și un an întreg între 1970 și 2026. `:user-invalid` oferă stiluri pentru erori.
 
-Trimiterea validă folosește `action="multumim.html"` și `method="get"`. Câmpurile nu au atributul `name`, pentru a nu serializa date personale în adresă. Formularul nu salvează propunerea și nu contactează o echipă; utilizatorul este informat în formular și pe confirmare.
+Trimiterea validă folosește `action="multumim.html"` și `method="get"`. Câmpurile nu au atributul `name`, pentru a nu serializa date personale în adresă. Formularul nu salvează propunerea și nu contactează o echipă.
 
 Imaginile și fontul sunt locale. Site-ul funcționează fără internet, iar sursele externe se deschid prin linkuri obișnuite.
 
@@ -76,9 +76,9 @@ Resursele din pagina Ghid includ The Strong National Museum of Play, Nintendo Sw
 - Au fost verificate 144 de combinații: 18 pagini × 2 teme × 4 lățimi (1440, 768, 390 și 320 de pixeli), fără imagini lipsă, erori de script sau depășire orizontală a paginii.
 - Cele 48 de destinații locale distincte, inclusiv ancorele, sunt valide.
 - Cele 36 de audituri automate axe-core pentru criteriile WCAG A și AA verificate nu au găsit probleme. Verificările automate nu reprezintă o certificare completă de accesibilitate.
-- Tema respectă inițial sistemul, se schimbă prin mouse sau tastatură și se păstrează după navigare și reîncărcare. Comutarea funcționează și dacă stocarea locală este indisponibilă.
+- Tema respectă inițial sistemul, folosește pictograme lună/soare cu etichetă accesibilă, se schimbă prin mouse sau tastatură și se păstrează după navigare și reîncărcare. Comutarea funcționează și dacă stocarea locală este indisponibilă.
 - Fără JavaScript, CSS păstrează tema sistemului, iar formularul validează și se trimite corect.
-- Formularul respinge câmpurile obligatorii goale, nume și titluri prea scurte sau formate numai din spații, emailuri incorecte, ani în afara limitelor sau neîntregi, explicații prea scurte, lipsa platformei și lipsa confirmării.
+- Formularul respinge câmpurile obligatorii goale, nume și titluri prea scurte sau formate numai din spații, emailuri incorecte, ani în afara limitelor sau neîntregi, explicații prea scurte, lipsa platformei.
 - O completare validă deschide `multumim.html`; valorile personale nu apar în URL.
 - Linkul de salt la conținut este primul element focalizat. Tabelele pot fi focalizate pentru derulare cu tastatura, iar întrebările din Ghid se deschid și se închid corect.
 - Erorile formularului sunt vizibile și în modul întunecat fără JavaScript. Toate imaginile și fontul sunt locale, iar paginile nu conțin stiluri sau scripturi inline.

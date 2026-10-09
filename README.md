@@ -42,11 +42,11 @@ Meniul comun include starea paginii curente. Linkurile din colecție duc la arti
 
 ## Tema și formularul
 
-Tema inițială urmează preferința sistemului. Butonul „Mod întunecat” schimbă tema și o memorează local pentru navigare și reîncărcare. Culorile sunt definite în CSS. Dacă JavaScript este dezactivat, site-ul urmează în continuare preferința sistemului prin `prefers-color-scheme`; butonul este ascuns.
+Tema inițială urmează preferința sistemului. Butonul cu pictograme lună/soare schimbă tema și o memorează local pentru navigare și reîncărcare. Culorile sunt definite în CSS. Dacă JavaScript este dezactivat, site-ul urmează în continuare preferința sistemului prin `prefers-color-scheme`; butonul este ascuns.
 
 Formularul folosește `required`, `type="email"`, `minlength`, `maxlength`, `pattern`, `min`, `max` și `step`. Etichetele și textele de ajutor sunt asociate câmpurilor, iar stilurile `:user-invalid` semnalează erorile după interacțiune. Validarea și trimiterea funcționează fără JavaScript.
 
-`action="multumim.html"` și `method="get"` deschid confirmarea după validare. Câmpurile nu au atributul `name`, astfel încât valorile personale nu sunt incluse în URL și nu sunt trimise unui server. Este un formular demonstrativ, fără backend sau salvare; acest lucru este explicat și în interfață.
+`action="multumim.html"` și `method="get"` deschid confirmarea după validare. Câmpurile nu au atributul `name`, astfel încât valorile personale nu sunt incluse în URL și nu sunt trimise unui server. Este un formular demonstrativ, fără backend sau salvare.
 
 ## Surse
 

@@ -36,10 +36,45 @@
           <button
             class="theme-toggle"
             type="button"
+            aria-label="Mod întunecat"
+            title="Activează modul întunecat"
             aria-pressed="false"
             hidden
           >
-            Mod întunecat
+            <svg
+              class="theme-icon theme-icon-moon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M21 12.79A9 9 0 0 1 11.21 3 9 9 0 1 0 21 12.79Z"></path>
+            </svg>
+            <svg
+              class="theme-icon theme-icon-sun"
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path
+                d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
+              ></path>
+            </svg>
           </button>
         </div>
       </div>
@@ -64,8 +99,7 @@
         >
           <h2 id="formular">Propune un joc</h2>
           <p>
-            Formular demonstrativ: datele personale nu sunt trimise sau salvate.
-            După completarea corectă se deschide pagina de confirmare.
+            Un joc bun are o poveste de spus. Ajută-ne să descoperim următorul.
           </p>
           <fieldset>
             <legend>Despre tine</legend>
@@ -99,8 +133,7 @@
                 placeholder="player@example.com"
                 aria-describedby="email-ajutor">
               <p class="field-hint" id="email-ajutor">
-                Folosește formatul nume@domeniu.ro. Pentru exercițiu poți folosi
-                o adresă fictivă.
+                Folosește formatul nume@domeniu.ro.
               </p>
               <p class="field-error" id="email-eroare">
                 Introdu o adresă de email validă.
@@ -129,11 +162,7 @@
             </div>
             <div class="form-field">
               <label for="platforma">Consola sau platforma *</label
-              ><select
-                id="platforma"
-                required
-               
-              >
+              ><select id="platforma" required>
                 <option value="">Alege o platformă</option>
                 <option value="nes">NES / Famicom</option>
                 <option value="snes">SNES / Super Famicom</option>
@@ -182,12 +211,7 @@
               </p>
             </div>
           </fieldset>
-          <label class="checkbox-label"
-            ><input id="confirmare" type="checkbox" required><span
-              >Am înțeles că acesta este un formular de exercițiu și că
-              propunerea nu este salvată. *</span
-            ></label
-          ><button class="button" type="submit">Trimite propunerea</button>
+          <button class="button" type="submit">Trimite propunerea</button>
         </form>
         <aside class="form-aside" aria-labelledby="idee">
           <section>
@@ -237,7 +261,7 @@
           </nav>
         </div>
         <div class="footer-bottom">
-          <p>© 2026 Retrocadia · Proiect educațional</p>
+          <p>© 2026 Retrocadia</p>
           <p>Jocurile și imaginile aparțin creatorilor lor.</p>
         </div>
       </div>

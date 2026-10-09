@@ -17,8 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const button = document.querySelector(".theme-toggle");
   if (!button) return;
   button.hidden = false;
-  const updateButton = () =>
-    button.setAttribute("aria-pressed", String(root.dataset.theme === "dark"));
+  const updateButton = () => {
+    const dark = root.dataset.theme === "dark";
+    button.setAttribute("aria-pressed", String(dark));
+    button.title = dark ? "Activează modul luminos" : "Activează modul întunecat";
+  };
   updateButton();
   button.addEventListener("click", () => {
     root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";

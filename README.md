@@ -1,6 +1,6 @@
 # Retrocadia
 
-Un site educațional în limba română despre jocurile retro, construit numai cu HTML și CSS. Fără JavaScript, framework-uri, biblioteci de interfață sau proces de build.
+Un site educațional în limba română despre jocurile retro, construit cu HTML și CSS și un mic script JavaScript pentru memorarea temei. Fără framework-uri, biblioteci de interfață sau proces de build.
 
 Deschide `index.html` în browser. Toate paginile, imaginile și fontul funcționează local, fără conexiune la internet. Doar linkurile către resurse externe necesită internet.
 
@@ -27,7 +27,26 @@ Apoi deschide `http://localhost:8000`.
 | `RAPORT.md`          | Explicația temei, structurii și stilurilor pentru prezentare |
 | `assets/SOURCES.md`  | Proveniența exactă a imaginilor                              |
 
+Site-ul are 18 pagini: cele patru pagini inițiale, o colecție de console, șase profiluri de joc, cinci profiluri de consolă, un formular și o confirmare.
+
+| Pagini și fișiere noi                                                                                                                             | Rol                                                              |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `super-mario-bros.html`, `the-legend-of-zelda.html`, `tetris.html`, `super-mario-world.html`, `sonic-the-hedgehog.html`, `street-fighter-ii.html` | Profiluri de joc cu comenzi, mecanici, sfaturi și context        |
+| `console.html`                                                                                                                                    | Colecția celor cinci console                                     |
+| `nes.html`, `snes.html`, `mega-drive.html`, `game-boy.html`, `atari-2600.html`                                                                    | Istorie, hardware, jocuri și verificări pentru consola originală |
+| `propune.html`                                                                                                                                    | Formular de recomandare cu validare HTML nativă                  |
+| `multumim.html`                                                                                                                                   | Pagina deschisă după o completare validă                         |
+| `js/theme.js`                                                                                                                                     | Alegerea și memorarea modului luminos sau întunecat              |
+
 Meniul comun include starea paginii curente. Linkurile din colecție duc la articolele corespunzătoare, iar întrebările folosesc elementele HTML native `details` și `summary`.
+
+## Tema și formularul
+
+Tema inițială urmează preferința sistemului. Butonul „Mod întunecat” schimbă tema și o memorează local pentru navigare și reîncărcare. Culorile sunt definite în CSS. Dacă JavaScript este dezactivat, site-ul urmează în continuare preferința sistemului prin `prefers-color-scheme`; butonul este ascuns.
+
+Formularul folosește `required`, `type="email"`, `minlength`, `maxlength`, `pattern`, `min`, `max` și `step`. Etichetele și textele de ajutor sunt asociate câmpurilor, iar stilurile `:user-invalid` semnalează erorile după interacțiune. Validarea și trimiterea funcționează fără JavaScript.
+
+`action="multumim.html"` și `method="get"` deschid confirmarea după validare. Câmpurile nu au atributul `name`, astfel încât valorile personale nu sunt incluse în URL și nu sunt trimise unui server. Este un formular demonstrativ, fără backend sau salvare; acest lucru este explicat și în interfață.
 
 ## Surse
 

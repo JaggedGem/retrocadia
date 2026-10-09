@@ -8,6 +8,7 @@
       content="Cum începi să descoperi jocurile retro: alegerea platformei, controllere, sfaturi, întrebări frecvente și surse pentru imagini.">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/theme.js"></script>
     <title>Ghid pentru începători — Retrocadia</title>
   </head>
   <body>
@@ -21,14 +22,26 @@
             width="32"
             height="32">retrocadia</a
         >
-        <nav aria-label="Navigare principală">
-          <ul class="nav-list">
-            <li><a href="index.html">Acasă</a></li>
-            <li><a href="jocuri.html">Jocuri</a></li>
-            <li><a href="istorie.html">Istorie</a></li>
-            <li><a href="ghid.html" aria-current="page">Ghid</a></li>
-          </ul>
-        </nav>
+        <div class="header-tools">
+          <nav aria-label="Navigare principală">
+            <ul class="nav-list">
+              <li><a href="index.html">Acasă</a></li>
+              <li><a href="jocuri.html">Jocuri</a></li>
+              <li><a href="console.html">Console</a></li>
+              <li><a href="istorie.html">Istorie</a></li>
+              <li><a href="ghid.html" aria-current="page">Ghid</a></li>
+              <li><a href="propune.html">Propune</a></li>
+            </ul>
+          </nav>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-pressed="false"
+            hidden
+          >
+            Mod întunecat
+          </button>
+        </div>
       </div>
     </header>
     <main id="continut">
@@ -135,7 +148,7 @@
             </p>
           </div>
         </div>
-        <div class="table-wrap">
+        <section class="table-wrap" tabindex="0" aria-label="Tabel cu derulare orizontală">
           <table>
             <caption>
               Opțiuni pentru jocurile clasice
@@ -167,7 +180,7 @@
               </tr>
             </tbody>
           </table>
-        </div>
+        </section>
         <p class="table-note">
           O opțiune oficială este
           <a href="https://www.nintendo.com/us/gaming-systems/switch/online/"
@@ -349,6 +362,19 @@
                 >
                 Sonic the Hedgehog.
               </li>
+              <li>
+                <a
+                  href="https://github.com/libretro-thumbnails/Nintendo_-_Game_Boy"
+                  >Game Boy:</a
+                >
+                Tetris, ediția pentru consola portabilă.
+              </li>
+              <li>
+                <a href="https://github.com/libretro-thumbnails/Atari_-_2600"
+                  >Atari 2600:</a
+                >
+                River Raid.
+              </li>
             </ul>
             <p>
               Jocurile, personajele și imaginile aparțin titularilor lor. Sunt
@@ -380,9 +406,9 @@
             <p>Un mic loc pentru marile jocuri de altădată.</p>
           </div>
           <nav class="footer-links" aria-label="Navigare secundară">
-            <a href="index.html">Acasă</a><a href="jocuri.html">Jocuri</a
-            ><a href="istorie.html">Istorie</a
-            ><a href="#resurse">Resurse &amp; imagini</a>
+            <a href="jocuri.html">Jocuri</a><a href="console.html">Console</a
+            ><a href="propune.html">Propune un joc</a
+            ><a href="ghid.html#resurse">Resurse &amp; imagini</a>
           </nav>
         </div>
         <div class="footer-bottom">

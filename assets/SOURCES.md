@@ -14,3 +14,10 @@ Capturi reale din edițiile prezentate, descărcate din [libretro-thumbnails](ht
 Drepturile asupra jocurilor și imaginilor aparțin Nintendo, Sega, Capcom și celorlalți titulari. Capturile ilustrează un proiect educațional și nu sunt prezentate drept creații originale Retrocadia.
 
 Simbolul `favicon.svg` a fost desenat pentru acest site. Fontul existent `PressStart2P-Regular.ttf` a fost păstrat; licența lui este în `fonts/OFL.txt`, iar sursa este [Google Fonts / CodeMan38](https://github.com/google/fonts/tree/main/ofl/pressstart2p).
+
+## Capturi suplimentare pentru profilurile de console
+
+- `images/tetris-game-boy.png`: Tetris (World) (Rev 1), Nintendo Game Boy — [sursa PNG](https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy/master/Named_Snaps/Tetris%20%28World%29%20%28Rev%201%29.png).
+- `images/river-raid.png`: River Raid (USA), Atari 2600 — [sursa PNG](https://raw.githubusercontent.com/libretro-thumbnails/Atari_-_2600/master/Named_Snaps/River%20Raid%20%28USA%29.png).
+
+Profilurile consolelor folosesc capturi din jocurile respective, identificate prin legende. Aceste imagini nu sunt prezentate ca fotografii de hardware.

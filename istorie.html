@@ -8,6 +8,7 @@
       content="O scurtă istorie a jocurilor retro, de la Pong și Atari 2600 la NES, Game Boy, Mega Drive și Super Nintendo.">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/theme.js"></script>
     <title>O scurtă istorie — Retrocadia</title>
   </head>
   <body>
@@ -21,14 +22,26 @@
             width="32"
             height="32">retrocadia</a
         >
-        <nav aria-label="Navigare principală">
-          <ul class="nav-list">
-            <li><a href="index.html">Acasă</a></li>
-            <li><a href="jocuri.html">Jocuri</a></li>
-            <li><a href="istorie.html" aria-current="page">Istorie</a></li>
-            <li><a href="ghid.html">Ghid</a></li>
-          </ul>
-        </nav>
+        <div class="header-tools">
+          <nav aria-label="Navigare principală">
+            <ul class="nav-list">
+              <li><a href="index.html">Acasă</a></li>
+              <li><a href="jocuri.html">Jocuri</a></li>
+              <li><a href="console.html">Console</a></li>
+              <li><a href="istorie.html" aria-current="page">Istorie</a></li>
+              <li><a href="ghid.html">Ghid</a></li>
+              <li><a href="propune.html">Propune</a></li>
+            </ul>
+          </nav>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-pressed="false"
+            hidden
+          >
+            Mod întunecat
+          </button>
+        </div>
       </div>
     </header>
     <main id="continut">
@@ -80,7 +93,11 @@
           <li>
             <span class="year">1977</span>
             <article>
-              <h3>Atari 2600: schimbă cartușul, schimbă jocul.</h3>
+              <h3>
+                <a href="atari-2600.html"
+                  >Atari 2600: schimbă cartușul, schimbă jocul.</a
+                >
+              </h3>
               <p>
                 Lansată inițial ca Atari Video Computer System, consola folosea
                 cartușe interschimbabile. Televizorul din sufragerie putea
@@ -155,10 +172,10 @@
             </p>
           </div>
         </div>
-        <div class="table-wrap">
+        <section class="table-wrap" tabindex="0" aria-label="Tabel cu derulare orizontală">
           <table>
             <caption>
-              Console emblematice ale erei retro
+              Console emblematice ale erei retro — deschide numele pentru profil
             </caption>
             <thead>
               <tr>
@@ -170,36 +187,42 @@
             </thead>
             <tbody>
               <tr>
-                <th scope="row">Famicom / NES</th>
+                <th scope="row"><a href="nes.html">Famicom / NES</a></th>
                 <td>1983</td>
                 <td>Grafică 2D și comenzi simple</td>
                 <td>
-                  <a href="jocuri.html#super-mario-bros">Super Mario Bros.</a>
+                  <a href="super-mario-bros.html">Super Mario Bros.</a>
                 </td>
               </tr>
               <tr>
-                <th scope="row">Mega Drive / Genesis</th>
+                <th scope="row">
+                  <a href="mega-drive.html">Mega Drive / Genesis</a>
+                </th>
                 <td>1988</td>
                 <td>Acțiune rapidă și spirit arcade</td>
-                <td><a href="jocuri.html#sonic">Sonic the Hedgehog</a></td>
+                <td>
+                  <a href="sonic-the-hedgehog.html">Sonic the Hedgehog</a>
+                </td>
               </tr>
               <tr>
-                <th scope="row">Game Boy</th>
+                <th scope="row"><a href="game-boy.html">Game Boy</a></th>
                 <td>1989</td>
                 <td>Joc portabil, ecran monocrom</td>
                 <td>Tetris, ediția Game Boy</td>
               </tr>
               <tr>
-                <th scope="row">Super Famicom / SNES</th>
+                <th scope="row">
+                  <a href="snes.html">Super Famicom / SNES</a>
+                </th>
                 <td>1990</td>
                 <td>Lumi 2D cu grafică și sunet mai bogate</td>
                 <td>
-                  <a href="jocuri.html#super-mario-world">Super Mario World</a>
+                  <a href="super-mario-world.html">Super Mario World</a>
                 </td>
               </tr>
             </tbody>
           </table>
-        </div>
+        </section>
       </section>
 
       <section
@@ -267,6 +290,14 @@
           <a class="button" href="jocuri.html">Explorează colecția</a>
         </div>
       </section>
+      <section class="section container" aria-labelledby="toate-consolele">
+        <h2 id="toate-consolele">Dincolo de cronologie.</h2>
+        <p>
+          Descoperă fișele detaliate pentru cele patru console din tabel și
+          pentru Atari 2600.
+        </p>
+        <a class="button dark" href="console.html">Toate cele cinci console</a>
+      </section>
     </main>
     <footer class="site-footer">
       <div class="container">
@@ -282,8 +313,8 @@
             <p>Un mic loc pentru marile jocuri de altădată.</p>
           </div>
           <nav class="footer-links" aria-label="Navigare secundară">
-            <a href="index.html">Acasă</a><a href="jocuri.html">Jocuri</a
-            ><a href="ghid.html">Ghid</a
+            <a href="jocuri.html">Jocuri</a><a href="console.html">Console</a
+            ><a href="propune.html">Propune un joc</a
             ><a href="ghid.html#resurse">Resurse &amp; imagini</a>
           </nav>
         </div>

@@ -13,15 +13,17 @@ Tema permite îmbinarea unui hobby cu informații istorice, descrieri, imagini �
 Site-ul conține 18 pagini HTML distincte, un fișier CSS comun și un mic script pentru tema vizuală. Cele patru pagini principale sunt:
 
 1. **Acasă — `index.html`:** prezintă tema, recomandă trei jocuri, explică atractivitatea jocurilor retro și oferă un tabel de recomandări.
-2. **Jocuri — `jocuri.html`:** conține șase articole cu capturi, informații despre ediții, elemente de gameplay și sfaturi. Un tabel compară platforma, genul și numărul de jucători.
-3. **Istorie — `istorie.html`:** prezintă șase repere cronologice, compară patru console și explică influența limitărilor tehnice asupra designului.
-4. **Ghid — `ghid.html`:** propune pași de început, compară metodele de acces la jocuri și oferă întrebări frecvente și surse.
+2. **Jocuri — `games/index.html`:** conține șase articole cu capturi, informații despre ediții, elemente de gameplay și sfaturi. Un tabel compară platforma, genul și numărul de jucători.
+3. **Istorie — `pages/istorie.html`:** prezintă șase repere cronologice, compară patru console și explică influența limitărilor tehnice asupra designului.
+4. **Ghid — `pages/ghid.html`:** propune pași de început, compară metodele de acces la jocuri și oferă întrebări frecvente și surse.
 
-Colecțiile sunt extinse prin șase profiluri individuale de joc și cinci profiluri de consolă. Pagina `console.html` permite alegerea unei console. Profilurile explică mecanici, comenzi, ediții, componente hardware și recomandări practice, cu legături între jocuri și console.
+Colecțiile sunt extinse prin șase profiluri individuale de joc și cinci profiluri de consolă. Pagina `consoles/index.html` permite alegerea unei console. Profilurile explică mecanici, comenzi, ediții, componente hardware și recomandări practice, cu legături între jocuri și console.
 
-`propune.html` conține un formular, iar `multumim.html` este pagina de confirmare. Astfel, proiectul are 18 pagini în total.
+`pages/propune.html` conține un formular, iar `pages/multumim.html` este pagina de confirmare. Astfel, proiectul are 18 pagini în total.
 
 Fiecare pagină folosește aceeași navigare și același subsol. Linkurile sunt relative, astfel încât site-ul poate fi deschis atât local, cât și pe un server static.
+
+Doar `index.html` se află în rădăcină. Directorul `games/` conține colecția și profilurile jocurilor, `consoles/` conține colecția și profilurile consolelor, iar `pages/` conține istoria, ghidul, formularul și confirmarea. Fișierele CSS, scriptul, imaginile și fontul rămân în directoarele lor comune.
 
 ## Elementele HTML utilizate
 
@@ -75,11 +77,12 @@ Resursele din pagina Ghid includ The Strong National Museum of Play, Nintendo Sw
 - Toate cele 18 pagini au trecut validarea HTML fără erori sau avertismente; scriptul de temă a trecut verificarea sintaxei.
 - Au fost verificate 144 de combinații: 18 pagini × 2 teme × 4 lățimi (1440, 768, 390 și 320 de pixeli), fără imagini lipsă, erori de script sau depășire orizontală a paginii.
 - Cele 48 de destinații locale distincte, inclusiv ancorele, sunt valide.
+- După organizarea în directoare, au fost reverificate 537 de referințe locale către pagini, ancore și fișiere comune. Navigarea, tema și trimiterea formularului au fost verificate și când site-ul este servit din subdirectorul `/retrocadia/`.
 - Cele 36 de audituri automate axe-core pentru criteriile WCAG A și AA verificate nu au găsit probleme. Verificările automate nu reprezintă o certificare completă de accesibilitate.
 - Tema respectă inițial sistemul, folosește pictograme lună/soare cu etichetă accesibilă, se schimbă prin mouse sau tastatură și se păstrează după navigare și reîncărcare. Comutarea funcționează și dacă stocarea locală este indisponibilă.
 - Fără JavaScript, CSS păstrează tema sistemului, iar formularul validează și se trimite corect.
 - Formularul respinge câmpurile obligatorii goale, nume și titluri prea scurte sau formate numai din spații, emailuri incorecte, ani în afara limitelor sau neîntregi, explicații prea scurte, lipsa platformei.
-- O completare validă deschide `multumim.html`; valorile personale nu apar în URL.
+- O completare validă deschide `pages/multumim.html`; valorile personale nu apar în URL.
 - Linkul de salt la conținut este primul element focalizat. Tabelele pot fi focalizate pentru derulare cu tastatura, iar întrebările din Ghid se deschid și se închid corect.
 - Erorile formularului sunt vizibile și în modul întunecat fără JavaScript. Toate imaginile și fontul sunt locale, iar paginile nu conțin stiluri sau scripturi inline.
 

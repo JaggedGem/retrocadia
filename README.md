@@ -14,12 +14,14 @@ Apoi deschide `http://localhost:8000`.
 
 ## Fișiere
 
+Doar pagina principală `index.html` se află în rădăcină. Colecția și profilurile jocurilor sunt în `games/`, cele ale consolelor în `consoles/`, iar paginile generale și formularul în `pages/`. Fiecare colecție are propriul `index.html`.
+
 | Fișier               | Rol                                                          |
 | -------------------- | ------------------------------------------------------------ |
 | `index.html`         | Introducere, jocuri recomandate și tabel de orientare        |
-| `jocuri.html`        | Șase jocuri, capturi, descrieri, sfaturi și comparație       |
-| `istorie.html`       | Cronologie și prezentarea a patru console                    |
-| `ghid.html`          | Primii pași, opțiuni de joc, întrebări și surse              |
+| `games/index.html`   | Șase jocuri, capturi, descrieri, sfaturi și comparație       |
+| `pages/istorie.html` | Cronologie și prezentarea a patru console                    |
+| `pages/ghid.html`    | Primii pași, opțiuni de joc, întrebări și surse              |
 | `css/style.css`      | Toate stilurile și adaptările pentru mobil                   |
 | `assets/images/`     | Capturi reale din jocuri                                     |
 | `assets/favicon.svg` | Simbolul site-ului                                           |
@@ -29,14 +31,14 @@ Apoi deschide `http://localhost:8000`.
 
 Site-ul are 18 pagini: cele patru pagini inițiale, o colecție de console, șase profiluri de joc, cinci profiluri de consolă, un formular și o confirmare.
 
-| Pagini și fișiere noi                                                                                                                             | Rol                                                              |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| `super-mario-bros.html`, `the-legend-of-zelda.html`, `tetris.html`, `super-mario-world.html`, `sonic-the-hedgehog.html`, `street-fighter-ii.html` | Profiluri de joc cu comenzi, mecanici, sfaturi și context        |
-| `console.html`                                                                                                                                    | Colecția celor cinci console                                     |
-| `nes.html`, `snes.html`, `mega-drive.html`, `game-boy.html`, `atari-2600.html`                                                                    | Istorie, hardware, jocuri și verificări pentru consola originală |
-| `propune.html`                                                                                                                                    | Formular de recomandare cu validare HTML nativă                  |
-| `multumim.html`                                                                                                                                   | Pagina deschisă după o completare validă                         |
-| `js/theme.js`                                                                                                                                     | Alegerea și memorarea modului luminos sau întunecat              |
+| Pagini și fișiere noi                                                                                                                                                                 | Rol                                                              |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `games/super-mario-bros.html`, `games/the-legend-of-zelda.html`, `games/tetris.html`, `games/super-mario-world.html`, `games/sonic-the-hedgehog.html`, `games/street-fighter-ii.html` | Profiluri de joc cu comenzi, mecanici, sfaturi și context        |
+| `consoles/index.html`                                                                                                                                                                 | Colecția celor cinci console                                     |
+| `consoles/nes.html`, `consoles/snes.html`, `consoles/mega-drive.html`, `consoles/game-boy.html`, `consoles/atari-2600.html`                                                           | Istorie, hardware, jocuri și verificări pentru consola originală |
+| `pages/propune.html`                                                                                                                                                                  | Formular de recomandare cu validare HTML nativă                  |
+| `pages/multumim.html`                                                                                                                                                                 | Pagina deschisă după o completare validă                         |
+| `js/theme.js`                                                                                                                                                                         | Alegerea și memorarea modului luminos sau întunecat              |
 
 Meniul comun include starea paginii curente. Linkurile din colecție duc la articolele corespunzătoare, iar întrebările folosesc elementele HTML native `details` și `summary`.
 
@@ -46,7 +48,7 @@ Tema inițială urmează preferința sistemului. Butonul cu pictograme lună/soa
 
 Formularul folosește `required`, `type="email"`, `minlength`, `maxlength`, `pattern`, `min`, `max` și `step`. Etichetele și textele de ajutor sunt asociate câmpurilor, iar stilurile `:user-invalid` semnalează erorile după interacțiune. Validarea și trimiterea funcționează fără JavaScript.
 
-`action="multumim.html"` și `method="get"` deschid confirmarea după validare. Câmpurile nu au atributul `name`, astfel încât valorile personale nu sunt incluse în URL și nu sunt trimise unui server. Este un formular demonstrativ, fără backend sau salvare.
+În `pages/propune.html`, `action="multumim.html"` și `method="get"` deschid confirmarea `pages/multumim.html` după validare. Câmpurile nu au atributul `name`, astfel încât valorile personale nu sunt incluse în URL și nu sunt trimise unui server. Este un formular demonstrativ, fără backend sau salvare.
 
 ## Surse
 

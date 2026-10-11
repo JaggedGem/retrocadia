@@ -2,7 +2,7 @@
 
 Un site educațional în limba română despre jocurile retro, construit cu HTML și CSS și un mic script JavaScript pentru memorarea temei. Fără framework-uri, biblioteci de interfață sau proces de build.
 
-Deschide `index.html` în browser. Toate paginile, imaginile și fontul funcționează local, fără conexiune la internet. Doar linkurile către resurse externe necesită internet.
+Deschide `index.html` în browser. Toate paginile, imaginile și fontul funcționează local, fără conexiune la internet. Materialele video/audio și linkurile către resurse externe necesită internet.
 
 Pentru un server local opțional, din directorul proiectului:
 
@@ -19,8 +19,8 @@ Doar pagina principală `index.html` se află în rădăcină. Colecția și pro
 | Fișier               | Rol                                                          |
 | -------------------- | ------------------------------------------------------------ |
 | `index.html`         | Introducere, jocuri recomandate și tabel de orientare        |
-| `games/index.html`   | Șase jocuri, capturi, descrieri, sfaturi și comparație       |
-| `pages/istorie.html` | Cronologie și prezentarea a patru console                    |
+| `games/index.html`   | Trei jocuri, capturi, descrieri, sfaturi și comparație       |
+| `pages/istorie.html` | Cronologie și prezentarea a trei console                     |
 | `pages/ghid.html`    | Primii pași, opțiuni de joc, întrebări și surse              |
 | `css/style.css`      | Toate stilurile și adaptările pentru mobil                   |
 | `assets/images/`     | Capturi reale din jocuri                                     |
@@ -29,16 +29,16 @@ Doar pagina principală `index.html` se află în rădăcină. Colecția și pro
 | `RAPORT.md`          | Explicația temei, structurii și stilurilor pentru prezentare |
 | `assets/SOURCES.md`  | Proveniența exactă a imaginilor                              |
 
-Site-ul are 18 pagini: cele patru pagini inițiale, o colecție de console, șase profiluri de joc, cinci profiluri de consolă, un formular și o confirmare.
+Site-ul are 13 pagini: Acasă, două colecții, trei profiluri de joc, trei profiluri de consolă, Istorie, Ghid, formularul și confirmarea.
 
-| Pagini și fișiere noi                                                                                                                                                                 | Rol                                                              |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| `games/super-mario-bros.html`, `games/the-legend-of-zelda.html`, `games/tetris.html`, `games/super-mario-world.html`, `games/sonic-the-hedgehog.html`, `games/street-fighter-ii.html` | Profiluri de joc cu comenzi, mecanici, sfaturi și context        |
-| `consoles/index.html`                                                                                                                                                                 | Colecția celor cinci console                                     |
-| `consoles/nes.html`, `consoles/snes.html`, `consoles/mega-drive.html`, `consoles/game-boy.html`, `consoles/atari-2600.html`                                                           | Istorie, hardware, jocuri și verificări pentru consola originală |
-| `pages/propune.html`                                                                                                                                                                  | Formular de recomandare cu validare HTML nativă                  |
-| `pages/multumim.html`                                                                                                                                                                 | Pagina deschisă după o completare validă                         |
-| `js/theme.js`                                                                                                                                                                         | Alegerea și memorarea modului luminos sau întunecat              |
+| Pagini și fișiere                                                                   | Rol                                          |
+| ----------------------------------------------------------------------------------- | -------------------------------------------- |
+| `games/super-mario-bros.html`, `games/sonic-the-hedgehog.html`, `games/tetris.html` | Comenzi, mecanici, sfaturi și gameplay video |
+| `consoles/index.html`                                                               | Colecția celor trei console                  |
+| `consoles/nes.html`, `consoles/mega-drive.html`, `consoles/game-boy.html`           | Istorie, hardware, jocuri și video           |
+| `pages/propune.html`                                                                | Formular cu validare HTML nativă             |
+| `pages/multumim.html`                                                               | Confirmare după completare validă            |
+| `js/theme.js`                                                                       | Alegerea și memorarea temei                  |
 
 Meniul comun include starea paginii curente. Linkurile din colecție duc la articolele corespunzătoare, iar întrebările folosesc elementele HTML native `details` și `summary`.
 
@@ -49,6 +49,14 @@ Tema inițială urmează preferința sistemului. Butonul cu pictograme lună/soa
 Formularul folosește `required`, `type="email"`, `minlength`, `maxlength`, `pattern`, `min`, `max` și `step`. Etichetele și textele de ajutor sunt asociate câmpurilor, iar stilurile `:user-invalid` semnalează erorile după interacțiune. Validarea și trimiterea funcționează fără JavaScript.
 
 În `pages/propune.html`, `action="multumim.html"` și `method="get"` deschid confirmarea `pages/multumim.html` după validare. Câmpurile nu au atributul `name`, astfel încât valorile personale nu sunt incluse în URL și nu sunt trimise unui server. Este un formular demonstrativ, fără backend sau salvare.
+
+## Video și audio
+
+Cele șase profiluri includ gameplay YouTube în `iframe`, cu titlu accesibil, încărcare amânată și link către înregistrarea originală. Elementele `details` permit deschiderea playerului fără JavaScript.
+
+Profilul Tetris are un player nativ `video` pentru o filmare de la CTWC 2023. Tetris și Game Boy au playere `audio` pentru interpretarea Korobeiniki de Maxime Lorant. Au controale native, `preload="none"`, explicații și atribuire. Nu există autoplay. CSS adaptează playerele la lățimea paginii și la ambele teme.
+
+Fișierele media sunt redate de pe Wikimedia, iar gameplay-ul de pe YouTube; necesită internet și disponibilitatea serviciilor externe. Folosește serverul local de mai sus pentru iframe-urile YouTube. Sursele, autorii și licențele sunt în `assets/SOURCES.md`.
 
 ## Surse
 

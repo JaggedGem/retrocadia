@@ -980,6 +980,72 @@ button {
   padding: 40px 0 55px;
   border-bottom: 1px solid var(--line);
 }
+
+.media-section {
+  margin-block: 36px;
+}
+.media-card {
+  margin: 20px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.media-card summary {
+  padding: 18px 20px;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--soft);
+}
+.media-card[open] summary {
+  border-bottom: 1px solid var(--line);
+}
+.media-content {
+  padding: 16px;
+}
+.media-card iframe,
+.media-card video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+  background: #111;
+}
+.media-card video {
+  object-fit: contain;
+}
+.media-card figcaption {
+  padding: 16px 20px;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.audio-card {
+  padding: 20px;
+}
+.audio-card h3 {
+  margin-top: 0;
+}
+.audio-card audio {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin-block: 18px;
+}
+.media-credit {
+  margin: 14px 0 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+audio:focus-visible,
+video:focus-visible,
+iframe:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: -3px;
+}
 .profile-grid {
   display: grid;
   grid-template-columns: 1.3fr 1fr;

@@ -4,22 +4,22 @@
 
 Tema proiectului este prezentarea jocurilor video retro din anii 1980 și începutul anilor 1990. Retrocadia explică de ce aceste jocuri sunt interesante și astăzi, cum au evoluat consolele și cum poate începe un jucător nou.
 
-Tema permite îmbinarea unui hobby cu informații istorice, descrieri, imagini și comparații. Jocurile selectate ilustrează genuri diferite: platformer, aventură, puzzle și lupte. Fontul pixel și capturile reale susțin tema fără a îngreuna citirea textului.
+Tema permite îmbinarea unui hobby cu informații istorice, descrieri, imagini și comparații. Jocurile selectate ilustrează genuri diferite: platformer și puzzle, cu ritmuri și moduri de joc diferite. Fontul pixel și capturile reale susțin tema fără a îngreuna citirea textului.
 
 **Aprobarea temei de către profesor:** de completat de elev.
 
 ## Structura site-ului
 
-Site-ul conține 18 pagini HTML distincte, un fișier CSS comun și un mic script pentru tema vizuală. Cele patru pagini principale sunt:
+Site-ul conține 13 pagini HTML distincte, un fișier CSS comun și un mic script pentru tema vizuală. Cele patru pagini principale sunt:
 
 1. **Acasă — `index.html`:** prezintă tema, recomandă trei jocuri, explică atractivitatea jocurilor retro și oferă un tabel de recomandări.
-2. **Jocuri — `games/index.html`:** conține șase articole cu capturi, informații despre ediții, elemente de gameplay și sfaturi. Un tabel compară platforma, genul și numărul de jucători.
-3. **Istorie — `pages/istorie.html`:** prezintă șase repere cronologice, compară patru console și explică influența limitărilor tehnice asupra designului.
+2. **Jocuri — `games/index.html`:** conține trei articole cu capturi, informații despre ediții, elemente de gameplay și sfaturi. Un tabel compară platforma, genul și numărul de jucători.
+3. **Istorie — `pages/istorie.html`:** prezintă șase repere cronologice, compară trei console și explică influența limitărilor tehnice asupra designului.
 4. **Ghid — `pages/ghid.html`:** propune pași de început, compară metodele de acces la jocuri și oferă întrebări frecvente și surse.
 
-Colecțiile sunt extinse prin șase profiluri individuale de joc și cinci profiluri de consolă. Pagina `consoles/index.html` permite alegerea unei console. Profilurile explică mecanici, comenzi, ediții, componente hardware și recomandări practice, cu legături între jocuri și console.
+Colecțiile sunt extinse prin trei profiluri individuale de joc și trei profiluri de consolă. Pagina `consoles/index.html` permite alegerea unei console. Profilurile explică mecanici, comenzi, ediții, componente hardware și recomandări practice, cu legături între jocuri și console.
 
-`pages/propune.html` conține un formular, iar `pages/multumim.html` este pagina de confirmare. Astfel, proiectul are 18 pagini în total.
+`pages/propune.html` conține un formular, iar `pages/multumim.html` este pagina de confirmare. Astfel, proiectul are 13 pagini în total.
 
 Fiecare pagină folosește aceeași navigare și același subsol. Linkurile sunt relative, astfel încât site-ul poate fi deschis atât local, cât și pe un server static.
 
@@ -39,6 +39,8 @@ Doar `index.html` se află în rădăcină. Directorul `games/` conține colecț
 | `table`, `caption`, `thead`, `tbody`, `th`, `td` | Tabele de comparație, cu antete identificate prin `scope`                |
 | `a`, `id`                                        | Navigare între pagini, ancore în pagină și resurse externe               |
 | `details`, `summary`                             | Întrebări care se deschid fără JavaScript                                |
+| `video`, `audio`, `source`                       | Playere native pentru clipul de turneu și melodia Korobeiniki             |
+| `iframe`                                        | Gameplay YouTube cu titlu accesibil și link către original                 |
 
 Fiecare pagină are un singur `h1`. Paginile de conținut folosesc subtitluri, paragrafe, liste, imagini și tabele cu mai multe rânduri și coloane. Formularul adaugă `form`, `fieldset`, `legend`, `label`, `input`, `select`, `option`, `textarea` și `button`.
 
@@ -56,7 +58,7 @@ Fișierul `css/style.css` este legat în toate paginile prin `link rel="styleshe
 
 ## Funcționalitate
 
-Nu există framework-uri, biblioteci sau dependențe pentru rulare. Linkurile, ancorele, întrebările și formularul folosesc comportamentul nativ HTML.
+Nu există framework-uri, biblioteci sau dependențe pentru rulare. Linkurile, ancorele, întrebările, playerele media și formularul folosesc comportamentul nativ HTML.
 
 Singurul script, `js/theme.js`, alege inițial tema sistemului, schimbă tema la apăsarea butonului și păstrează alegerea în `localStorage`. Dacă stocarea este indisponibilă, schimbarea temei continuă să funcționeze pe pagina curentă. Fără JavaScript, CSS aplică tema sistemului.
 
@@ -64,7 +66,7 @@ Formularul are câmpuri pentru poreclă, email, titlu, platformă, an opțional 
 
 Trimiterea validă folosește `action="multumim.html"` și `method="get"`. Câmpurile nu au atributul `name`, pentru a nu serializa date personale în adresă. Formularul nu salvează propunerea și nu contactează o echipă.
 
-Imaginile și fontul sunt locale. Site-ul funcționează fără internet, iar sursele externe se deschid prin linkuri obișnuite.
+Imaginile și fontul sunt locale. Paginile, capturile și fontul funcționează fără internet. Playerele video/audio și resursele externe necesită internet.
 
 ## Proveniența informațiilor și a imaginilor
 
@@ -72,19 +74,22 @@ Capturile sunt din edițiile indicate în pagini și provin din proiectul public
 
 Resursele din pagina Ghid includ The Strong National Museum of Play, Nintendo Switch Online, pagina oficială despre Tetris și RetroArch. Anii diferiți de lansare sunt explicați atunci când o ediție a apărut în regiuni sau pe platforme diferite.
 
+## Video și audio
+
+Fiecare dintre cele șase profiluri are un `iframe` YouTube cu gameplay din ediția prezentată. Atributul `title` identifică înregistrarea, `loading="lazy"` amână încărcarea, iar `details` și `summary` permit deschiderea playerului fără script suplimentar. Există și link către YouTube.
+
+Pagina Tetris include un element `video` cu `source type="video/webm"`, `controls`, `playsinline`, `poster` și `preload="none"`. Filmarea lui Aptiz712 de la CTWC 2023 prezintă tehnica rolling, are descriere vizuală și atribuire CC BY 4.0. Tetris și Game Boy includ `audio`, cu `source type="audio/ogg"` și controale native, pentru interpretarea Korobeiniki de Maxime Lorant, sub CC BY-SA 4.0. Fișierele sunt nemodificate și redate direct de pe Wikimedia.
+
+CSS păstrează raportul 16:9 pentru video și iframe, adaptează lățimea playerelor și folosește culorile temei pentru carduri, explicații și credite. Niciun player nu pornește automat. Sursele și licențele sunt în `assets/SOURCES.md` și lângă playere.
+
 ## Verificări efectuate
 
-- Toate cele 18 pagini au trecut validarea HTML fără erori sau avertismente; scriptul de temă a trecut verificarea sintaxei.
-- Au fost verificate 144 de combinații: 18 pagini × 2 teme × 4 lățimi (1440, 768, 390 și 320 de pixeli), fără imagini lipsă, erori de script sau depășire orizontală a paginii.
-- Cele 48 de destinații locale distincte, inclusiv ancorele, sunt valide.
-- După organizarea în directoare, au fost reverificate 537 de referințe locale către pagini, ancore și fișiere comune. Navigarea, tema și trimiterea formularului au fost verificate și când site-ul este servit din subdirectorul `/retrocadia/`.
-- Cele 36 de audituri automate axe-core pentru criteriile WCAG A și AA verificate nu au găsit probleme. Verificările automate nu reprezintă o certificare completă de accesibilitate.
-- Tema respectă inițial sistemul, folosește pictograme lună/soare cu etichetă accesibilă, se schimbă prin mouse sau tastatură și se păstrează după navigare și reîncărcare. Comutarea funcționează și dacă stocarea locală este indisponibilă.
-- Fără JavaScript, CSS păstrează tema sistemului, iar formularul validează și se trimite corect.
-- Formularul respinge câmpurile obligatorii goale, nume și titluri prea scurte sau formate numai din spații, emailuri incorecte, ani în afara limitelor sau neîntregi, explicații prea scurte, lipsa platformei.
-- O completare validă deschide `pages/multumim.html`; valorile personale nu apar în URL.
-- Linkul de salt la conținut este primul element focalizat. Tabelele pot fi focalizate pentru derulare cu tastatura, iar întrebările din Ghid se deschid și se închid corect.
-- Erorile formularului sunt vizibile și în modul întunecat fără JavaScript. Toate imaginile și fontul sunt locale, iar paginile nu conțin stiluri sau scripturi inline.
+- Toate cele 13 pagini trec validarea HTML fără erori sau avertismente. Au fost verificate 371 de referințe locale, cu 44 de destinații distincte, fără fișiere sau ancore lipsă.
+- Au fost verificate 78 de combinații de pagină, temă și lățime: 13 pagini × 2 teme × 3 lățimi (1440, 390 și 320 de pixeli). Imaginile locale se încarcă, iar pagina și playerele nu depășesc lățimea disponibilă.
+- Cele 26 de audituri axe-core pentru regulile WCAG A și AA verificate nu au găsit încălcări. Rezultatul nu certifică accesibilitatea completă a site-ului sau a materialelor externe.
+- Colecțiile au câte trei articole. Navigarea între jocuri și console, memorarea temei și redirecționarea formularului au fost verificate când site-ul este servit din `/retrocadia/`.
+- Fără JavaScript, formularul respinge câmpurile obligatorii goale și emailul incorect; o completare validă deschide `pages/multumim.html` fără date personale în URL. Secțiunile video se deschid și fără JavaScript.
+- Titlurile și edițiile înregistrărilor au fost verificate în sursele publice, iar autorii și licențele fișierelor Wikimedia sunt documentate. Redarea efectivă a YouTube și Wikimedia nu a putut fi verificată în mediul de lucru, deoarece politica lui de rețea blochează aceste servicii.
 
 ## Plan pentru prezentarea orală
 
@@ -96,5 +101,6 @@ Resursele din pagina Ghid includ The Strong National Museum of Play, Nintendo Sw
 6. Micșorează fereastra browserului pentru a demonstra adaptarea la mobil.
 7. Schimbă tema și navighează pe altă pagină pentru a demonstra memorarea alegerii.
 8. Încearcă un formular incomplet, apoi completează-l corect și arată confirmarea.
-9. Explică validarea nativă HTML și motivul pentru care datele nu sunt trimise.
-10. Prezintă sursele și diferența dintre conținutul HTML, stilizarea CSS și rolul limitat al scriptului.
+9. Deschide un clip de gameplay și arată controalele video și audio.
+10. Explică validarea nativă HTML și motivul pentru care datele nu sunt trimise.
+11. Prezintă sursele și diferența dintre conținutul HTML, stilizarea CSS și rolul limitat al scriptului.

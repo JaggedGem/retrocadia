@@ -20,7 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const updateButton = () => {
     const dark = root.dataset.theme === "dark";
     button.setAttribute("aria-pressed", String(dark));
-    button.title = dark ? "Activează modul luminos" : "Activează modul întunecat";
+    button.setAttribute(
+      "aria-label",
+      dark ? "Activează modul luminos" : "Activează modul întunecat",
+    );
+    button.title = dark
+      ? "Activează modul luminos"
+      : "Activează modul întunecat";
   };
   updateButton();
   button.addEventListener("click", () => {

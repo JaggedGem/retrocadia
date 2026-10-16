@@ -20,7 +20,7 @@ Profilurile consolelor folosesc capturi din jocurile respective, identificate pr
 
 ## Video și audio
 
-Înregistrările audio și video sunt redate din sursele publice originale; nu sunt copii locale. Linkurile directe rămân disponibile lângă fiecare player. Niciun player nu pornește automat; fișierele audio/video folosesc `preload="none"`, iar iframe-urile YouTube sunt în secțiuni `details` și folosesc `loading="lazy"`.
+Înregistrările audio și video externe din profiluri sunt redate din sursele publice originale; nu sunt copii locale. Demonstrațiile locale noi sunt documentate separat mai jos. Linkurile directe rămân disponibile lângă fiecare player. Niciun player nu pornește automat; fișierele audio/video folosesc `preload="none"`, iar iframe-urile YouTube sunt în secțiuni `details` și folosesc `loading="lazy"`.
 
 | Material                                                   | Sursă și autor                                                                                                                                                                                | Utilizare                                 |
 | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
@@ -39,3 +39,15 @@ Surse directe:
 - [Video WebM](https://upload.wikimedia.org/wikipedia/commons/a/af/Fractal_and_DogPlayingTetris_rolling_during_CTWC_2023.webm).
 
 Videoclipurile YouTube sunt încorporate prin `youtube-nocookie.com`, cu atribuire canalului și link către original. Drepturile asupra jocurilor și înregistrărilor rămân ale titularilor respectivi.
+
+## Materiale demonstrative locale — pagina Imagine & sunet
+
+Următoarele materiale au fost realizate pentru Retrocadia. Nu sunt capturi din jocuri comerciale și nu preiau muzică din acestea:
+
+- `media/linie-completa.mp4`: animație schematică originală, 640 × 480 px, H.264, 8 secunde, fără sunet. Arată o piesă orizontală care completează un rând, dispariția acelui rând și coborârea blocurilor de deasupra.
+- `media/linie-completa.ro.vtt`: subtitrări descriptive originale în limba română, cu patru intervale sincronizate.
+- `media/linie-poster.svg`: schemă vectorială originală a poziției inițiale. Este posterul animației și poate fi deschisă separat, fără mișcare.
+- `media/motiv-chiptune.wav`: motiv monofonic demonstrativ original, PCM mono, 22.050 Hz, 16 biți, 6 secunde. Folosește note cu undă dreptunghiulară și pauze, nu înregistrări sau sample-uri din jocuri.
+- Diagrama undei din `pages/media.html` este un SVG original, cu titlu și descriere accesibilă.
+
+Fontul Archivo, de Omnibus-Type, este păstrat local în `fonts/Archivo-Variable.ttf`, cu SIL Open Font License în `fonts/Archivo-OFL.txt`: [sursa](https://github.com/google/fonts/tree/main/ofl/archivo). Fontul Press Start 2P din proiectul inițial rămâne în director, cu licența sa, însă interfața nouă nu îl utilizează.

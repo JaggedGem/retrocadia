@@ -1,82 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ro">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <meta
       name="description"
-      content="Pante, inele și viteză. Un platformer în care impulsul este la fel de important ca direcția.">
-    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="../css/style.css">
+      content="Pante, inele și viteză. Un platformer în care impulsul este la fel de important ca direcția."
+    >
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" >
+    <link rel="stylesheet" href="../css/style.css" >
     <script src="../js/theme.js"></script>
     <title>Sonic the Hedgehog — Retrocadia</title>
   </head>
   <body>
     <a class="skip-link" href="#continut">Sari la conținut</a>
     <header class="site-header">
-      <div class="container header-inner">
-        <a class="logo" href="../index.html"
-          ><img
-            src="../assets/favicon.svg"
-            alt=""
-            width="32"
-            height="32">retrocadia</a
+      <a class="logo" href="../index.html"
+        ><img
+          src="../assets/favicon.svg"
+          width="26"
+          height="26"
+          alt=""
+        >retrocadia</a
+      >
+      <nav aria-label="Navigare principală">
+        <ul class="nav-list">
+          <li><a href="../index.html">Colecția</a></li>
+          <li><a href="../games/index.html" aria-current="page">Jocuri</a></li>
+          <li><a href="../consoles/index.html">Console</a></li>
+          <li><a href="../pages/istorie.html">Cronologie</a></li>
+          <li><a href="../pages/ghid.html">Primii pași</a></li>
+          <li><a href="../pages/media.html">Imagine & sunet</a></li>
+          <li><a href="../pages/propune.html">Propune un joc</a></li>
+        </ul>
+      </nav>
+      <div class="rail-bottom">
+        <p>Un ghid al jocurilor și consolelor de altădată.</p>
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Activează modul întunecat"
+          aria-pressed="false"
+          hidden
         >
-        <div class="header-tools">
-          <nav aria-label="Navigare principală">
-            <ul class="nav-list">
-              <li><a href="../index.html">Acasă</a></li>
-              <li><a href="index.html" aria-current="true">Jocuri</a></li>
-              <li><a href="../consoles/index.html">Console</a></li>
-              <li><a href="../pages/istorie.html">Istorie</a></li>
-              <li><a href="../pages/ghid.html">Ghid</a></li>
-              <li><a href="../pages/propune.html">Propune</a></li>
-            </ul>
-          </nav>
-          <button
-            class="theme-toggle"
-            type="button"
-            aria-label="Mod întunecat"
-            title="Activează modul întunecat"
-            aria-pressed="false"
-            hidden
+          <svg
+            class="theme-icon theme-icon-moon"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
           >
-            <svg
-              class="theme-icon theme-icon-moon"
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path d="M21 12.79A9 9 0 0 1 11.21 3 9 9 0 1 0 21 12.79Z"></path>
-            </svg>
-            <svg
-              class="theme-icon theme-icon-sun"
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <circle cx="12" cy="12" r="4"></circle>
-              <path
-                d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
-              ></path>
-            </svg>
-          </button>
-        </div>
+            <path d="M21 12.8A9 9 0 0 1 11.2 3 9 9 0 1 0 21 12.8Z" />
+          </svg>
+          <svg
+            class="theme-icon theme-icon-sun"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l2 2m10 10 2 2M5 19l2-2M17 7l2-2"
+            />
+          </svg>
+          <span>Aspect</span>
+        </button>
       </div>
     </header>
     <main id="continut">
@@ -84,14 +79,13 @@
         <div class="container">
           <nav class="breadcrumbs" aria-label="Fir de navigare">
             <ol>
-              <li><a href="../index.html">Acasă</a></li>
+              <li><a href="../index.html">Colecția</a></li>
               <li><a href="index.html">Jocuri</a></li>
               <li aria-current="page">Sonic the Hedgehog</li>
             </ol>
           </nav>
           <div class="profile-grid">
             <div>
-              <p class="eyebrow">Colecția / Platformer</p>
               <h1>Sonic the Hedgehog</h1>
               <p class="lead">
                 Pante, inele și viteză. Un platformer în care impulsul este la
@@ -111,7 +105,8 @@
                 src="../assets/images/sonic-the-hedgehog.png"
                 alt="Sonic și inele aurii în Green Hill Zone din Sonic the Hedgehog"
                 width="320"
-                height="224">
+                height="224"
+              >
               <figcaption>
                 Captură din Sonic the Hedgehog · Mega Drive / Genesis
               </figcaption>
@@ -223,7 +218,6 @@
             </ol>
           </section>
           <section class="media-section" aria-labelledby="video-joc">
-            <p class="eyebrow">Play / Imagine și sunet</p>
             <h2 id="video-joc">Vezi cum se joacă.</h2>
             <p>
               Urmărește Green Hill Zone și observă cum pantele, inelele și
@@ -304,30 +298,9 @@
       </div>
     </main>
     <footer class="site-footer">
-      <div class="container">
-        <div class="footer-top">
-          <div>
-            <a class="logo" href="../index.html"
-              ><img
-                src="../assets/favicon.svg"
-                alt=""
-                width="32"
-                height="32">retrocadia</a
-            >
-            <p>Un mic loc pentru marile jocuri de altădată.</p>
-          </div>
-          <nav class="footer-links" aria-label="Navigare secundară">
-            <a href="index.html">Jocuri</a
-            ><a href="../consoles/index.html">Console</a
-            ><a href="../pages/propune.html">Propune un joc</a
-            ><a href="../pages/ghid.html#resurse">Resurse &amp; media</a>
-          </nav>
-        </div>
-        <div class="footer-bottom">
-          <p>© 2026 Retrocadia</p>
-          <p>Jocurile și imaginile aparțin creatorilor lor.</p>
-        </div>
-      </div>
+      <p>Retrocadia · Proiect educațional</p>
+      <a href="../pages/ghid.html#resurse">Surse și licențe</a>
+      <span>2026</span>
     </footer>
   </body>
 </html>

@@ -1,89 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ro">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <meta
       name="description"
-      content="Un formular cu validare pentru recomandări de jocuri retro și o pagină de confirmare.">
-    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="../css/style.css">
+      content="Un formular cu validare pentru recomandări de jocuri retro și o pagină de confirmare."
+    >
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" >
+    <link rel="stylesheet" href="../css/style.css" >
     <script src="../js/theme.js"></script>
     <title>Propune un joc — Retrocadia</title>
   </head>
   <body>
     <a class="skip-link" href="#continut">Sari la conținut</a>
     <header class="site-header">
-      <div class="container header-inner">
-        <a class="logo" href="../index.html"
-          ><img
-            src="../assets/favicon.svg"
-            alt=""
-            width="32"
-            height="32">retrocadia</a
+      <a class="logo" href="../index.html"
+        ><img
+          src="../assets/favicon.svg"
+          width="26"
+          height="26"
+          alt=""
+        >retrocadia</a
+      >
+      <nav aria-label="Navigare principală">
+        <ul class="nav-list">
+          <li><a href="../index.html">Colecția</a></li>
+          <li><a href="../games/index.html">Jocuri</a></li>
+          <li><a href="../consoles/index.html">Console</a></li>
+          <li><a href="../pages/istorie.html">Cronologie</a></li>
+          <li><a href="../pages/ghid.html">Primii pași</a></li>
+          <li><a href="../pages/media.html">Imagine & sunet</a></li>
+          <li>
+            <a href="../pages/propune.html" aria-current="page"
+              >Propune un joc</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="rail-bottom">
+        <p>Un ghid al jocurilor și consolelor de altădată.</p>
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Activează modul întunecat"
+          aria-pressed="false"
+          hidden
         >
-        <div class="header-tools">
-          <nav aria-label="Navigare principală">
-            <ul class="nav-list">
-              <li><a href="../index.html">Acasă</a></li>
-              <li><a href="../games/index.html">Jocuri</a></li>
-              <li><a href="../consoles/index.html">Console</a></li>
-              <li><a href="istorie.html">Istorie</a></li>
-              <li><a href="ghid.html">Ghid</a></li>
-              <li><a href="propune.html" aria-current="page">Propune</a></li>
-            </ul>
-          </nav>
-          <button
-            class="theme-toggle"
-            type="button"
-            aria-label="Mod întunecat"
-            title="Activează modul întunecat"
-            aria-pressed="false"
-            hidden
+          <svg
+            class="theme-icon theme-icon-moon"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
           >
-            <svg
-              class="theme-icon theme-icon-moon"
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path d="M21 12.79A9 9 0 0 1 11.21 3 9 9 0 1 0 21 12.79Z"></path>
-            </svg>
-            <svg
-              class="theme-icon theme-icon-sun"
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <circle cx="12" cy="12" r="4"></circle>
-              <path
-                d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
-              ></path>
-            </svg>
-          </button>
-        </div>
+            <path d="M21 12.8A9 9 0 0 1 11.2 3 9 9 0 1 0 21 12.8Z" />
+          </svg>
+          <svg
+            class="theme-icon theme-icon-sun"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l2 2m10 10 2 2M5 19l2-2M17 7l2-2"
+            />
+          </svg>
+          <span>Aspect</span>
+        </button>
       </div>
     </header>
     <main id="continut">
       <section class="page-intro">
         <div class="container">
-          <p class="eyebrow">Comunitate / O idee de la tine</p>
-          <h1>Ce joc ar merita<br>un loc în colecție?</h1>
+          <h1>Propune un joc</h1>
           <p class="lead">
             Spune-ne ce titlu ai vrea să descoperi și ce îl face interesant.
             Câmpurile marcate cu * sunt obligatorii.
@@ -97,7 +95,7 @@
           method="get"
           aria-labelledby="formular"
         >
-          <h2 id="formular">Propune un joc</h2>
+          <h2 id="formular">Recomandarea ta</h2>
           <p>
             Un joc bun are o poveste de spus. Ajută-ne să descoperim următorul.
           </p>
@@ -114,7 +112,8 @@
                 pattern=".*\S.*"
                 autocomplete="nickname"
                 placeholder="De exemplu, Player One"
-                aria-describedby="porecla-ajutor">
+                aria-describedby="porecla-ajutor"
+              >
               <p class="field-hint" id="porecla-ajutor">
                 Între 2 și 40 de caractere; nu folosi doar spații.
               </p>
@@ -131,7 +130,8 @@
                 maxlength="120"
                 autocomplete="email"
                 placeholder="player@example.com"
-                aria-describedby="email-ajutor">
+                aria-describedby="email-ajutor"
+              >
               <p class="field-hint" id="email-ajutor">
                 Folosește formatul nume@domeniu.ro.
               </p>
@@ -152,7 +152,8 @@
                 maxlength="80"
                 pattern=".*\S.*"
                 placeholder="De exemplu, Donkey Kong Country"
-                aria-describedby="joc-ajutor">
+                aria-describedby="joc-ajutor"
+              >
               <p class="field-hint" id="joc-ajutor">
                 Între 2 și 80 de caractere.
               </p>
@@ -182,7 +183,8 @@
                 max="2026"
                 step="1"
                 placeholder="1994"
-                aria-describedby="an-ajutor">
+                aria-describedby="an-ajutor"
+              >
               <p class="field-hint" id="an-ajutor">
                 Un an întreg între 1970 și 2026, dacă îl cunoști.
               </p>
@@ -212,6 +214,58 @@
           <button class="button" type="submit">Trimite propunerea</button>
         </form>
         <aside class="form-aside" aria-labelledby="idee">
+          <figure class="reference-image">
+            <img
+              src="../assets/images/tetris-game-boy.png"
+              width="160"
+              height="144"
+              alt="Tetris pe Game Boy, un exemplu de ediție care poate fi precizată într-o recomandare."
+            >
+            <figcaption>
+              Un titlu poate avea mai multe ediții. Precizează consola, dacă o
+              cunoști.
+            </figcaption>
+          </figure>
+          <p class="form-notice">
+            Exercițiu de formular: datele sunt validate în browser. Recomandarea
+            nu este salvată sau trimisă unei echipe.
+          </p>
+          <div
+            class="table-wrap"
+            role="region"
+            tabindex="0"
+            aria-label="Exemple de recomandări"
+          >
+            <table>
+              <caption>
+                Exemple pentru câmpuri
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Joc</th>
+                  <th scope="col">Platformă</th>
+                  <th scope="col">An</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Super Mario Bros.</th>
+                  <td>NES</td>
+                  <td>1985</td>
+                </tr>
+                <tr>
+                  <th scope="row">Tetris</th>
+                  <td>Game Boy</td>
+                  <td>1989</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sonic the Hedgehog</th>
+                  <td>Mega Drive</td>
+                  <td>1991</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <section>
             <h2 id="idee">Ce face o recomandare bună?</h2>
             <ul>
@@ -242,30 +296,9 @@
       </section>
     </main>
     <footer class="site-footer">
-      <div class="container">
-        <div class="footer-top">
-          <div>
-            <a class="logo" href="../index.html"
-              ><img
-                src="../assets/favicon.svg"
-                alt=""
-                width="32"
-                height="32">retrocadia</a
-            >
-            <p>Un mic loc pentru marile jocuri de altădată.</p>
-          </div>
-          <nav class="footer-links" aria-label="Navigare secundară">
-            <a href="../games/index.html">Jocuri</a
-            ><a href="../consoles/index.html">Console</a
-            ><a href="propune.html">Propune un joc</a
-            ><a href="ghid.html#resurse">Resurse &amp; media</a>
-          </nav>
-        </div>
-        <div class="footer-bottom">
-          <p>© 2026 Retrocadia</p>
-          <p>Jocurile și imaginile aparțin creatorilor lor.</p>
-        </div>
-      </div>
+      <p>Retrocadia · Proiect educațional</p>
+      <a href="../pages/ghid.html#resurse">Surse și licențe</a>
+      <span>2026</span>
     </footer>
   </body>
 </html>

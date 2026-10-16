@@ -12,32 +12,26 @@
     <script src="../js/theme.js"></script>
     <title>Console retro — Retrocadia</title>
   </head>
-  <body>
+  <body class="console-collection">
     <a class="skip-link" href="#continut">Sari la conținut</a>
     <header class="site-header">
       <a class="logo" href="../index.html"
         ><img
           src="../assets/favicon.svg"
-          width="26"
-          height="26"
-          alt=""
-        >retrocadia</a
-      >
+          width="30"
+          height="30"
+          alt="" >retrocadia<span class="logo-dot" aria-hidden="true"></span
+      ></a>
       <nav aria-label="Navigare principală">
         <ul class="nav-list">
-          <li><a href="../index.html">Colecția</a></li>
-          <li><a href="../games/index.html">Jocuri</a></li>
+          <li><a href="../index.html">Jocuri</a></li>
           <li>
             <a href="../consoles/index.html" aria-current="page">Console</a>
           </li>
-          <li><a href="../pages/istorie.html">Cronologie</a></li>
-          <li><a href="../pages/ghid.html">Primii pași</a></li>
-          <li><a href="../pages/media.html">Imagine & sunet</a></li>
           <li><a href="../pages/propune.html">Propune un joc</a></li>
         </ul>
       </nav>
-      <div class="rail-bottom">
-        <p>Un ghid al jocurilor și consolelor de altădată.</p>
+      <div class="header-tools">
         <button
           class="theme-toggle"
           type="button"
@@ -55,7 +49,7 @@
             stroke-width="1.5"
             aria-hidden="true"
           >
-            <path d="M21 12.8A9 9 0 0 1 11.2 3 9 9 0 1 0 21 12.8Z" />
+            <path d="M21 12.8A9 9 0 0 1 11.2 3 9 9 0 1 0 21 12.8Z"></path>
           </svg>
           <svg
             class="theme-icon theme-icon-sun"
@@ -67,12 +61,12 @@
             stroke-width="1.5"
             aria-hidden="true"
           >
-            <circle cx="12" cy="12" r="4" />
+            <circle cx="12" cy="12" r="4"></circle>
             <path
               d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l2 2m10 10 2 2M5 19l2-2M17 7l2-2"
-            />
+            ></path>
           </svg>
-          <span>Aspect</span>
+          <span>Temă</span>
         </button>
       </div>
     </header>
@@ -91,20 +85,19 @@
           <div>
             <h2 id="colectie">Alege o consolă.</h2>
             <p>
-              Fiecare profil explică istoria, hardware-ul și ce să verifici
-              înainte de a folosi un model original. Imaginile ilustrează
-              jocurile consolelor.
+              NES, Mega Drive și Game Boy: trei forme diferite ale aceleiași
+              idei. Deschide o fișă pentru hardware, comenzi și jocuri.
             </p>
           </div>
         </div>
         <div class="cards console-cards">
           <article class="game-card">
-            <a class="game-image" href="nes.html"
+            <a class="game-image hardware-nes" href="nes.html"
               ><img
-                src="../assets/images/super-mario-bros.png"
-                alt="Mario și blocuri în Super Mario Bros. pe NES"
-                width="256"
-                height="240"
+                src="../assets/images/nes-hardware.svg"
+                alt="Ilustrație a consolei NES și a controllerului cu două butoane de acțiune."
+                width="640"
+                height="420"
                 loading="lazy"
             ></a>
             <div class="card-body">
@@ -120,12 +113,12 @@
             </div>
           </article>
           <article class="game-card">
-            <a class="game-image lavender" href="mega-drive.html"
+            <a class="game-image hardware-mega-drive" href="mega-drive.html"
               ><img
-                src="../assets/images/sonic-the-hedgehog.png"
-                alt="Sonic în peisajul Green Hill Zone pe Mega Drive"
-                width="320"
-                height="224"
+                src="../assets/images/mega-drive-hardware.svg"
+                alt="Ilustrație a consolei Sega Mega Drive, modelul 1, și a controllerului său."
+                width="640"
+                height="420"
                 loading="lazy"
             ></a>
             <div class="card-body">
@@ -141,12 +134,12 @@
             </div>
           </article>
           <article class="game-card">
-            <a class="game-image peach" href="game-boy.html"
+            <a class="game-image hardware-game-boy" href="game-boy.html"
               ><img
-                src="../assets/images/tetris-game-boy.png"
-                alt="Tablă și piese din Tetris pe ecranul monocrom Game Boy"
-                width="160"
-                height="144"
+                src="../assets/images/game-boy-hardware.svg"
+                alt="Ilustrație a consolei portabile Game Boy, cu ecran verde și butoane A și B."
+                width="640"
+                height="420"
                 loading="lazy"
             ></a>
             <div class="card-body">
@@ -219,7 +212,7 @@
                 Deschide profilul consolei pentru a înțelege comenzile și
                 edițiile.
               </li>
-              <li>Verifică în ghid variantele prin care poți juca.</li>
+              <li>Compară mai jos variantele prin care poți juca.</li>
             </ol>
           </div>
           <aside class="callout">
@@ -229,15 +222,197 @@
               designul jocului. O idee bună poate funcționa și pe un sistem cu
               resurse limitate.
             </p>
-            <a class="text-link" href="../pages/ghid.html">Deschide ghidul</a>
+            <a class="text-link" href="../index.html#intrebari"
+              >Întrebări frecvente</a
+            >
           </aside>
         </div>
       </section>
+      <section class="section" id="cronologie" aria-labelledby="istoric">
+        <h2 id="istoric">Cum am ajuns aici</h2>
+        <details class="history-disclosure">
+          <summary>Deschide cronologia consolelor</summary>
+          <section class="section console-history" aria-labelledby="repere">
+            <div class="section-head">
+              <div>
+                <h2 id="repere">Câte un nivel, pe rând.</h2>
+                <p>
+                  O cronologie selectivă a perioadei în care jocurile au ajuns
+                  din sălile arcade în case și în buzunare.
+                </p>
+              </div>
+            </div>
+            <ol class="timeline">
+              <li>
+                <span class="year">1972</span>
+                <article>
+                  <h3>Pong face ideea ușor de înțeles.</h3>
+                  <p>
+                    Două palete, o minge și un scor. Jocul arcade al companiei
+                    Atari nu a fost primul joc video, dar a devenit un reper
+                    timpuriu al succesului comercial. Regulile familiare au
+                    făcut noul mediu accesibil.
+                  </p>
+                </article>
+              </li>
+              <li>
+                <span class="year">1977</span>
+                <article>
+                  <h3>Atari 2600: schimbă cartușul, schimbă jocul.</h3>
+                  <p>
+                    Lansată inițial ca Atari Video Computer System, consola
+                    folosea cartușe interschimbabile. Televizorul din sufragerie
+                    putea găzdui mai multe jocuri, iar colecționarea lor devenea
+                    parte din experiență.
+                  </p>
+                </article>
+              </li>
+              <li>
+                <span class="year">1983</span>
+                <article>
+                  <h3>Famicom pune bazele unei noi generații.</h3>
+                  <p>
+                    Nintendo lansează Family Computer în Japonia. Varianta
+                    internațională, Nintendo Entertainment System, ajunge în
+                    America de Nord în 1985. Personaje precum Mario și Link vor
+                    deveni repere ale acestei generații.
+                  </p>
+                </article>
+              </li>
+              <li>
+                <span class="year">1988</span>
+                <article>
+                  <h3>Mega Drive aduce energia jocurilor pe 16 biți.</h3>
+                  <p>
+                    Consola Sega apare în Japonia în 1988, apoi în America de
+                    Nord sub numele Genesis în 1989. Sonic the Hedgehog, lansat
+                    în 1991, îi va oferi un personaj emblematic și o identitate
+                    construită în jurul vitezei.
+                  </p>
+                </article>
+              </li>
+              <li>
+                <span class="year">1989</span>
+                <article>
+                  <h3>Game Boy: aventura încape în buzunar.</h3>
+                  <p>
+                    Un ecran monocrom și cartușe mici au dus jocurile dincolo de
+                    televizor. Tetris, inclus în pachetul de lansare în mai
+                    multe piețe, a fost o potrivire naturală pentru sesiuni
+                    scurte și joc oriunde.
+                  </p>
+                </article>
+              </li>
+              <li>
+                <span class="year">1990</span>
+                <article>
+                  <h3>Super Famicom deschide lumi mai bogate.</h3>
+                  <p>
+                    Noua consolă Nintendo apare în Japonia în 1990, apoi ca
+                    Super Nintendo în America de Nord în 1991 și în Europa în
+                    1992. Super Mario World arată potențialul generației prin
+                    hărți ramificate, culori și personaje expresive.
+                  </p>
+                </article>
+              </li>
+            </ol>
+          </section>
+        </details>
+      </section>
+      <section class="section container" id="cum-joci" aria-labelledby="moduri">
+        <div class="section-head">
+          <div>
+            <h2 id="moduri">Cum poți juca astăzi</h2>
+            <p>
+              Experiența originală este interesantă, dar nu este singura cale de
+              a descoperi un joc.
+            </p>
+          </div>
+        </div>
+        <section
+          class="table-wrap"
+          tabindex="0"
+          aria-label="Tabel cu derulare orizontală"
+        >
+          <table>
+            <caption>
+              Opțiuni pentru jocurile clasice
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Variantă</th>
+                <th scope="col">Avantaj</th>
+                <th scope="col">Ce să verifici</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Consolă și cartuș original</th>
+                <td>Hardware și controller din epocă</td>
+                <td>Starea consolei, regiunea și conectarea la televizor</td>
+              </tr>
+              <tr>
+                <th scope="row">Colecție sau relansare oficială</th>
+                <td>Acces simplu pe dispozitive actuale</td>
+                <td>Jocurile incluse, prețul și eventualul abonament</td>
+              </tr>
+              <tr>
+                <th scope="row">Emulator și copie autorizată</th>
+                <td>Configurare flexibilă și opțiuni de afișare</td>
+                <td>
+                  Compatibilitatea și dreptul de utilizare a fișierelor de joc
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <p class="table-note">
+          O opțiune oficială este
+          <a href="https://www.nintendo.com/us/gaming-systems/switch/online/"
+            >Nintendo Switch Online</a
+          >, care include biblioteci de jocuri clasice. Catalogul și nivelul de
+          abonament necesar diferă; verifică oferta disponibilă pentru regiunea
+          ta.
+        </p>
+      </section>
+
+      <section
+        class="section faq"
+        id="intrebari"
+        aria-labelledby="hardware-faq"
+      >
+        <h2 id="hardware-faq">Înainte de primul cablu</h2>
+        <details>
+          <summary>Am nevoie de o consolă originală?</summary>
+          <p>
+            Nu. O relansare oficială poate fi o variantă mai simplă. Hardware-ul
+            original are sens dacă te interesează experiența din epocă și ai
+            verificat alimentarea, regiunea și conectarea la televizor.
+          </p>
+        </details>
+        <details>
+          <summary>De ce contează regiunea consolei?</summary>
+          <p>
+            Cartușele, alimentarea și standardele video pot diferi. Verifică
+            modelul exact și manualul înainte să conectezi un dispozitiv vechi;
+            un adaptor fizic nu garantează compatibilitatea electrică.
+          </p>
+        </details>
+        <details>
+          <summary>Controller sau tastatură?</summary>
+          <p>
+            Începe cu ce ai deja. Pentru platforme, o cruce direcțională precisă
+            poate fi mai comodă. Variantele moderne pot permite remaparea
+            comenzilor.
+          </p>
+        </details>
+      </section>
     </main>
     <footer class="site-footer">
-      <p>Retrocadia · Proiect educațional</p>
-      <a href="../pages/ghid.html#resurse">Surse și licențe</a>
-      <span>2026</span>
+      <a class="footer-brand" href="../index.html">retrocadia</a>
+      <p>Jocuri vechi. Curiozitate nouă.</p>
+      <a href="../index.html#intrebari">Întrebări</a
+      ><a href="../index.html#resurse">Surse și licențe</a><span>© 2026</span>
     </footer>
   </body>
 </html>

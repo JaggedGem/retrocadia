@@ -40,14 +40,16 @@ Surse directe:
 
 Videoclipurile YouTube sunt încorporate prin `youtube-nocookie.com`, cu atribuire canalului și link către original. Drepturile asupra jocurilor și înregistrărilor rămân ale titularilor respectivi.
 
-## Materiale demonstrative locale — pagina Imagine & sunet
+## Materiale demonstrative locale — fișa Tetris
 
 Următoarele materiale au fost realizate pentru Retrocadia. Nu sunt capturi din jocuri comerciale și nu preiau muzică din acestea:
 
 - `media/linie-completa.mp4`: animație schematică originală, 640 × 480 px, H.264, 8 secunde, fără sunet. Arată o piesă orizontală care completează un rând, dispariția acelui rând și coborârea blocurilor de deasupra.
 - `media/linie-completa.ro.vtt`: subtitrări descriptive originale în limba română, cu patru intervale sincronizate.
 - `media/linie-poster.svg`: schemă vectorială originală a poziției inițiale. Este posterul animației și poate fi deschisă separat, fără mișcare.
-- `media/motiv-chiptune.wav`: motiv monofonic demonstrativ original, PCM mono, 22.050 Hz, 16 biți, 6 secunde. Folosește note cu undă dreptunghiulară și pauze, nu înregistrări sau sample-uri din jocuri.
-- Diagrama undei din `pages/media.html` este un SVG original, cu titlu și descriere accesibilă.
 
 Fontul Archivo, de Omnibus-Type, este păstrat local în `fonts/Archivo-Variable.ttf`, cu SIL Open Font License în `fonts/Archivo-OFL.txt`: [sursa](https://github.com/google/fonts/tree/main/ofl/archivo). Fontul Press Start 2P din proiectul inițial rămâne în director, cu licența sa, însă interfața nouă nu îl utilizează.
+
+## Ilustrații hardware originale
+
+`images/nes-hardware.svg`, `images/mega-drive-hardware.svg` și `images/game-boy-hardware.svg` sunt ilustrații vectoriale realizate pentru Retrocadia. Reprezintă NES-ul occidental cu încărcare frontală, Mega Drive modelul 1 și Game Boy original DMG. Sunt desene explicative, nu fotografii sau reproduceri exacte la scară. Legendele din site precizează acest lucru.

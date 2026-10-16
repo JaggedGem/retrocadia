@@ -18,24 +18,18 @@
       <a class="logo" href="index.html"
         ><img
           src="assets/favicon.svg"
-          width="26"
-          height="26"
-          alt=""
-        >retrocadia</a
-      >
+          width="30"
+          height="30"
+          alt="" >retrocadia<span class="logo-dot" aria-hidden="true"></span
+      ></a>
       <nav aria-label="Navigare principală">
         <ul class="nav-list">
-          <li><a href="index.html" aria-current="page">Colecția</a></li>
-          <li><a href="games/index.html">Jocuri</a></li>
+          <li><a href="index.html" aria-current="page">Jocuri</a></li>
           <li><a href="consoles/index.html">Console</a></li>
-          <li><a href="pages/istorie.html">Cronologie</a></li>
-          <li><a href="pages/ghid.html">Primii pași</a></li>
-          <li><a href="pages/media.html">Imagine & sunet</a></li>
           <li><a href="pages/propune.html">Propune un joc</a></li>
         </ul>
       </nav>
-      <div class="rail-bottom">
-        <p>Un ghid al jocurilor și consolelor de altădată.</p>
+      <div class="header-tools">
         <button
           class="theme-toggle"
           type="button"
@@ -53,7 +47,7 @@
             stroke-width="1.5"
             aria-hidden="true"
           >
-            <path d="M21 12.8A9 9 0 0 1 11.2 3 9 9 0 1 0 21 12.8Z" />
+            <path d="M21 12.8A9 9 0 0 1 11.2 3 9 9 0 1 0 21 12.8Z"></path>
           </svg>
           <svg
             class="theme-icon theme-icon-sun"
@@ -65,20 +59,20 @@
             stroke-width="1.5"
             aria-hidden="true"
           >
-            <circle cx="12" cy="12" r="4" />
+            <circle cx="12" cy="12" r="4"></circle>
             <path
               d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l2 2m10 10 2 2M5 19l2-2M17 7l2-2"
-            />
+            ></path>
           </svg>
-          <span>Aspect</span>
+          <span>Temă</span>
         </button>
       </div>
     </header>
     <main id="continut" class="archive-main">
       <div class="desk-heading">
-        <h1>Colecția</h1>
-        <a href="pages/ghid.html"
-          >La prima vizită?
+        <h1>Jocuri</h1>
+        <a href="#intrebari"
+          >Ai o întrebare?
           <span class="diagonal-arrow" aria-hidden="true"></span
         ></a>
       </div>
@@ -94,7 +88,12 @@
             checked
           >
           <label for="alege-mario"
-            ><span class="index-number">01</span
+            ><img
+              class="index-thumb"
+              src="assets/images/super-mario-bros.png"
+              width="256"
+              height="240"
+              alt="" ><span class="index-number">01</span
             ><span class="index-name">Super Mario Bros.</span
             ><span class="index-caption">1985 · NES</span
             ><span class="index-marker" aria-hidden="true"></span></label
@@ -106,7 +105,12 @@
             aria-controls="fisa-tetris"
           >
           <label for="alege-tetris"
-            ><span class="index-number">02</span
+            ><img
+              class="index-thumb"
+              src="assets/images/tetris.png"
+              width="256"
+              height="240"
+              alt="" ><span class="index-number">02</span
             ><span class="index-name">Tetris</span
             ><span class="index-caption">1989 · NES</span
             ><span class="index-marker" aria-hidden="true"></span></label
@@ -118,7 +122,12 @@
             aria-controls="fisa-sonic"
           >
           <label for="alege-sonic"
-            ><span class="index-number">03</span
+            ><img
+              class="index-thumb"
+              src="assets/images/sonic-the-hedgehog.png"
+              width="320"
+              height="224"
+              alt="" ><span class="index-number">03</span
             ><span class="index-name">Sonic the Hedgehog</span
             ><span class="index-caption">1991 · Mega Drive</span
             ><span class="index-marker" aria-hidden="true"></span
@@ -137,19 +146,47 @@
             class="record record-mario"
             id="fisa-mario"
             aria-labelledby="titlu-mario"
+            style="--shot-ratio: 256/240"
+            data-game="mario"
           >
             <figure class="record-image">
-              <picture
-                ><source
-                  srcset="assets/images/super-mario-bros.png"
-                  type="image/png" >
-                <img
-                  src="assets/images/super-mario-bros.png"
-                  width="256"
-                  height="240"
-                  alt="Mario în primul nivel din Super Mario Bros., cu blocuri, cărămizi și Goomba."
-              ></picture>
-              <figcaption>Super Mario Bros. · NES · 1985</figcaption>
+              <div class="stage-label">
+                <span>NES / Nintendo</span><span>1985</span>
+              </div>
+              <div class="stage-layout">
+                <a
+                  class="screen-link"
+                  href="games/super-mario-bros.html"
+                  aria-label="Deschide fișa jocului"
+                  ><picture
+                    ><source
+                      srcset="assets/images/super-mario-bros.png"
+                      type="image/png" >
+                    <img
+                      src="assets/images/super-mario-bros.png"
+                      width="256"
+                      height="240"
+                      alt="Mario în primul nivel din Super Mario Bros., cu blocuri, cărămizi și Goomba." ></picture></a
+                ><a class="stage-console" href="consoles/nes.html"
+                  ><img
+                    src="assets/images/nes-hardware.svg"
+                    width="640"
+                    height="420"
+                    alt=""
+                  ><span
+                    >NES<span
+                      class="diagonal-arrow"
+                      aria-hidden="true"
+                    ></span></span
+                  ><small>Consola jocului</small></a
+                >
+              </div>
+              <figcaption>
+                Captură din ediția NES · 1985.
+                <span class="hardware-credit"
+                  >Ilustrație hardware realizată pentru ghid.</span
+                >
+              </figcaption>
             </figure>
             <div class="record-body">
               <div class="record-copy">
@@ -177,6 +214,10 @@
                   <dt>Jucători</dt>
                   <dd>1–2, pe rând</dd>
                 </div>
+                <div>
+                  <dt>Consolă</dt>
+                  <dd><a href="consoles/nes.html">NES</a></dd>
+                </div>
               </dl>
             </div>
           </article>
@@ -184,17 +225,47 @@
             class="record record-tetris"
             id="fisa-tetris"
             aria-labelledby="titlu-tetris"
+            style="--shot-ratio: 256/240"
+            data-game="tetris"
           >
             <figure class="record-image">
-              <picture
-                ><source srcset="assets/images/tetris.png" type="image/png" >
-                <img
-                  src="assets/images/tetris.png"
-                  width="256"
-                  height="240"
-                  alt="Tabla de Tetris în ediția Nintendo pentru NES, cu piese și scor."
-              ></picture>
-              <figcaption>Tetris · NES · 1989</figcaption>
+              <div class="stage-label">
+                <span>NES / Nintendo</span><span>1989</span>
+              </div>
+              <div class="stage-layout">
+                <a
+                  class="screen-link"
+                  href="games/tetris.html"
+                  aria-label="Deschide fișa jocului"
+                  ><picture
+                    ><source
+                      srcset="assets/images/tetris.png"
+                      type="image/png" >
+                    <img
+                      src="assets/images/tetris.png"
+                      width="256"
+                      height="240"
+                      alt="Tabla de Tetris în ediția Nintendo pentru NES, cu piese și scor." ></picture></a
+                ><a class="stage-console" href="consoles/nes.html"
+                  ><img
+                    src="assets/images/nes-hardware.svg"
+                    width="640"
+                    height="420"
+                    alt=""
+                  ><span
+                    >NES<span
+                      class="diagonal-arrow"
+                      aria-hidden="true"
+                    ></span></span
+                  ><small>Consola jocului</small></a
+                >
+              </div>
+              <figcaption>
+                Captură din ediția NES · 1989.
+                <span class="hardware-credit"
+                  >Ilustrație hardware realizată pentru ghid.</span
+                >
+              </figcaption>
             </figure>
             <div class="record-body">
               <div class="record-copy">
@@ -221,6 +292,10 @@
                   <dt>Jucători</dt>
                   <dd>1 jucător</dd>
                 </div>
+                <div>
+                  <dt>Consolă</dt>
+                  <dd><a href="consoles/nes.html">NES</a></dd>
+                </div>
               </dl>
             </div>
           </article>
@@ -228,19 +303,47 @@
             class="record record-sonic"
             id="fisa-sonic"
             aria-labelledby="titlu-sonic"
+            style="--shot-ratio: 320/224"
+            data-game="sonic"
           >
             <figure class="record-image">
-              <picture
-                ><source
-                  srcset="assets/images/sonic-the-hedgehog.png"
-                  type="image/png" >
-                <img
-                  src="assets/images/sonic-the-hedgehog.png"
-                  width="320"
-                  height="224"
-                  alt="Sonic în Green Hill Zone, cu palmieri, inele și teren în carouri."
-              ></picture>
-              <figcaption>Sonic the Hedgehog · Mega Drive · 1991</figcaption>
+              <div class="stage-label">
+                <span>Mega Drive / Sega</span><span>1991</span>
+              </div>
+              <div class="stage-layout">
+                <a
+                  class="screen-link"
+                  href="games/sonic-the-hedgehog.html"
+                  aria-label="Deschide fișa jocului"
+                  ><picture
+                    ><source
+                      srcset="assets/images/sonic-the-hedgehog.png"
+                      type="image/png" >
+                    <img
+                      src="assets/images/sonic-the-hedgehog.png"
+                      width="320"
+                      height="224"
+                      alt="Sonic în Green Hill Zone, cu palmieri, inele și teren în carouri." ></picture></a
+                ><a class="stage-console" href="consoles/mega-drive.html"
+                  ><img
+                    src="assets/images/mega-drive-hardware.svg"
+                    width="640"
+                    height="420"
+                    alt=""
+                  ><span
+                    >Mega Drive<span
+                      class="diagonal-arrow"
+                      aria-hidden="true"
+                    ></span></span
+                  ><small>Consola jocului</small></a
+                >
+              </div>
+              <figcaption>
+                Captură din ediția Mega Drive · 1991.
+                <span class="hardware-credit"
+                  >Ilustrație hardware realizată pentru ghid.</span
+                >
+              </figcaption>
             </figure>
             <div class="record-body">
               <div class="record-copy">
@@ -268,6 +371,10 @@
                   <dt>Jucători</dt>
                   <dd>1 jucător</dd>
                 </div>
+                <div>
+                  <dt>Consolă</dt>
+                  <dd><a href="consoles/mega-drive.html">Mega Drive</a></dd>
+                </div>
               </dl>
             </div>
           </article>
@@ -275,22 +382,19 @@
       </div>
       <section class="archive-bottom" aria-labelledby="orientare">
         <div class="reading-note">
-          <h2 id="orientare">De unde începi?</h2>
+          <h2 id="orientare">
+            Trei universuri.<br >
+            Același chef de joacă.
+          </h2>
           <p>
-            Alege după felul în care îți place să joci. Anul lansării spune doar
-            o parte din poveste.
+            Alege platformele lui Mario, logica din Tetris sau viteza lui Sonic.
+            În fiecare fișă găsești comenzile, primul obiectiv și înregistrări
+            din joc.
           </p>
-          <h3>O sesiune scurtă</h3>
-          <ol>
-            <li>Alege un titlu din index.</li>
-            <li>Citește comenzile din fișa lui.</li>
-            <li>Încearcă un nivel, apoi revino la detalii.</li>
-          </ol>
+          <h3>Ai deja un controller?</h3>
           <p>
-            Vrei context?
-            <a href="pages/istorie.html">Urmărește cronologia</a> sau consultă
-            <a href="https://www.museumofplay.org/"
-              >The Strong National Museum of Play</a
+            <a href="consoles/index.html#cum-joci"
+              >Vezi variantele prin care poți juca</a
             >.
           </p>
         </div>
@@ -335,11 +439,104 @@
           </table>
         </div>
       </section>
+      <section
+        class="section container faq"
+        id="intrebari"
+        aria-labelledby="faq"
+      >
+        <div class="section-head">
+          <div>
+            <h2 id="faq">Câteva răspunsuri înainte de start.</h2>
+            <p>Deschide o întrebare pentru a citi răspunsul.</p>
+          </div>
+        </div>
+        <details>
+          <summary>Ce înseamnă, de fapt, „retro”?</summary>
+          <p>
+            Nu există un an-limită acceptat de toată lumea. Termenul se
+            folosește de obicei pentru jocuri și sisteme din generații
+            anterioare. Retrocadia se concentrează pe perioada jocurilor 2D din
+            anii 1980 și începutul anilor 1990.
+          </p>
+        </details>
+        <details>
+          <summary>Trebuie să cumpăr o consolă veche?</summary>
+          <p>
+            Nu. Colecțiile și relansările oficiale pot fi un început mai
+            accesibil. O consolă originală merită luată în calcul dacă te
+            interesează și hardware-ul, nu doar jocul.
+          </p>
+        </details>
+        <details>
+          <summary>Ce este un emulator?</summary>
+          <p>
+            Este un program care reproduce comportamentul unui alt sistem.
+            Emulatorul și fișierele jocurilor sunt lucruri separate: folosește
+            jocuri și fișiere pentru care ai permisiunea necesară.
+          </p>
+        </details>
+        <details>
+          <summary>De ce același joc are ani de lansare diferiți?</summary>
+          <p>
+            Lansările în Japonia, America de Nord și Europa nu aveau întotdeauna
+            loc în același an. Pot exista și versiuni pentru mai multe
+            platforme. În colecție precizăm ediția și, când este relevant,
+            diferența dintre lansări.
+          </p>
+        </details>
+        <details>
+          <summary>Pot să joc direct pe Retrocadia?</summary>
+          <p>
+            Retrocadia este un ghid, nu o platformă de jocuri. Poți explora
+            descrierile, compara titlurile și folosi resursele oficiale de mai
+            jos pentru a găsi o variantă de joc potrivită.
+          </p>
+        </details>
+      </section>
+
+      <div class="section source-section" role="region" aria-labelledby="surse">
+        <details id="resurse">
+          <summary id="surse">Surse și licențe</summary>
+          <div>
+            <p>
+              Capturile provin din
+              <a href="https://github.com/libretro-thumbnails"
+                >libretro-thumbnails</a
+              >; jocurile și imaginile aparțin Nintendo, Sega și celorlalți
+              titulari. Ilustrațiile consolelor și demonstrația schematică sunt
+              realizate pentru Retrocadia.
+            </p>
+            <ul>
+              <li>
+                <a href="https://www.museumofplay.org/collections/"
+                  >The Strong National Museum of Play</a
+                >
+                — istoria jocurilor.
+              </li>
+              <li>
+                <a href="https://tetris.com/about-us">Povestea Tetris</a> —
+                context despre începuturile jocului.
+              </li>
+              <li>
+                Gameplay: nesguide și NintendoComplete, cu linkuri în fișe.
+                Materialele Wikimedia își păstrează atribuirile lângă playere.
+              </li>
+              <li>
+                <a href="https://github.com/google/fonts/tree/main/ofl/archivo"
+                  >Archivo, de Omnibus-Type</a
+                >
+                — SIL Open Font License.
+              </li>
+            </ul>
+          </div>
+        </details>
+      </div>
     </main>
     <footer class="site-footer">
-      <p>Retrocadia · Proiect educațional</p>
-      <a href="pages/ghid.html#resurse">Surse și licențe</a>
-      <span>2026</span>
+      <a class="footer-brand" href="index.html">retrocadia</a>
+      <p>Jocuri vechi. Curiozitate nouă.</p>
+      <a href="index.html#intrebari">Întrebări</a
+      ><a href="index.html#resurse">Surse și licențe</a><span>© 2026</span>
     </footer>
   </body>
 </html>

@@ -1,55 +1,53 @@
 # Retrocadia
 
-Un mic atlas în limba română despre trei jocuri retro și consolele lor. Proiect pentru Studiul Individual Nr. 1: 14 pagini HTML, un fișier CSS comun, resurse media locale și un singur script opțional pentru tema vizuală. Nu are framework, dependențe sau proces de build.
-
-Deschide `index.html` direct în browser. Pentru subtitrări și derularea temporală a playerelor, folosește serverul local opțional, cu suport HTTP Range:
+Un ghid în limba română despre trei jocuri retro și trei console. Nouă pagini HTML, un fișier CSS comun și un singur script opțional pentru tema vizuală. Fără framework, dependențe sau build.
 
 ```sh
 python3 serve.py
 ```
 
-Deschide apoi `http://localhost:8000`. Interfața, capturile, animația și motivul audio funcționează fără internet. Înregistrările YouTube și fișierele Wikimedia din profiluri necesită internet.
+Deschide `http://localhost:8000`. Serverul local opțional oferă HTTP Range pentru derularea video și servește fișierele de subtitrare. Site-ul poate fi găzduit pe orice server static; Python nu face parte din aplicație.
 
-## Organizare
+## Nouă pagini, trei destinații în meniu
 
-| Director sau fișier | Conținut |
+| Fișier | Rol |
 | --- | --- |
-| `index.html` | Index selectabil: Mario, Tetris și Sonic |
-| `games/` | Colecția și trei fișe de joc, cu reguli, comenzi și video |
-| `consoles/` | Colecția și trei fișe de consolă: NES, Mega Drive, Game Boy |
-| `pages/istorie.html` | Cronologie și comparații |
-| `pages/ghid.html` | Primii pași, întrebări și surse |
-| `pages/media.html` | Imagine, video local, subtitrări, audio și încorporări |
-| `pages/propune.html` | Formular cu validare HTML nativă |
-| `pages/multumim.html` | Confirmare demonstrativă și rute de întoarcere |
-| `css/style.css` | Aspectul comun, temele și adaptarea la ecrane mici |
-| `serve.py` | Server local opțional, fără dependențe; nu este necesar pe o găzduire statică |
-| `js/theme.js` | Schimbarea și memorarea temei; singurul JavaScript |
-| `assets/images/` | Capturi reale din edițiile prezentate |
-| `assets/media/` | MP4, WAV, VTT și schema SVG realizate pentru ghid |
-| `assets/SOURCES.md` | Sursele și proveniența materialelor |
-| `RAPORT.md` | Justificare, cerințe, explicații și plan de prezentare |
+| `index.html` | Colecția de jocuri, selector cu capturi, comparație, întrebări și surse |
+| `consoles/index.html` | Colecția de console, comparație, cronologie, variante de joc și întrebări hardware |
+| `games/super-mario-bros.html` | Reguli, comenzi, sfaturi și gameplay Mario |
+| `games/tetris.html` | Fișa Tetris, video demonstrativ cu subtitrări, diagramă, audio și gameplay |
+| `games/sonic-the-hedgehog.html` | Reguli, comenzi, sfaturi și gameplay Sonic |
+| `consoles/nes.html` | NES: istorie, hardware și jocuri |
+| `consoles/mega-drive.html` | Mega Drive: istorie, hardware și jocuri |
+| `consoles/game-boy.html` | Game Boy: istorie, hardware, audio și gameplay |
+| `pages/propune.html` | Formular demonstrativ cu validare și confirmare în aceeași pagină |
 
-## Interfața
+Colecția duplicată de jocuri și paginile separate de ghid, media, cronologie și confirmare au fost eliminate. Conținutul util este integrat în colecții și în fișele potrivite.
 
-Punctul de pornire este colecția. O listă de titluri schimbă captura și fișa scurtă din zona de lectură. Selecția folosește butoane radio HTML și selectorul CSS `:has()`, fără JavaScript; poate fi operată și cu tastele săgeți. Linkul din fișă deschide articolul complet.
+## Aspect și imagini
 
-Navigarea comună este laterală pe desktop și se așază pe rânduri pe mobil. Titlurile sunt discrete, informațiile folosesc spații și separatoare fine, iar o singură nuanță verde marchează selecția. Nu există secțiune de promovare, bandă de statistici sau degradeuri.
+Textura vizuală vine din tipografie îndrăzneață, contururi ferme și culori legate de joc: coral pentru Mario, albastru pentru Tetris și galben pentru Sonic. Fundalul rămâne deschis și calm; nu există degradeuri sau secțiune de promovare.
 
-Titlurile folosesc Georgia din sistem, iar textul folosește fontul local Archivo. Interfața respectă `prefers-reduced-motion`. Linkul de salt, focusul vizibil, numele accesibile, legendele și textele alternative sunt păstrate.
+Capturile își păstrează proporțiile originale. Selectorul are miniaturi, iar captura mare duce direct la fișa jocului. Consolele sunt reprezentate prin trei ilustrații SVG originale, nu prin capturi de joc care ar putea fi confundate cu imagini ale hardware-ului. Fiecare desen este identificat ca ilustrație.
 
-## Media
+Pe mobil, meniul și selectorul se rearanjează, iar linkul către consola jocului rămâne în datele fișei. Tabelele se derulează în propriul container. Focusul este vizibil, navigarea funcționează prin tastatură, iar preferința pentru mișcare redusă este respectată.
 
-Pagina **Imagine & sunet** include `picture`, `img`, `video`, `audio`, `source`, `track`, `iframe`, `svg`, `object` și `embed`. Animația schematică de 8 secunde explică completarea unei linii; are subtitrări românești, transcriere și schemă statică. Motivul audio original durează 6 secunde. Controalele sunt native, iar redarea pornește numai la alegerea vizitatorului.
+## HTML, CSS și JavaScript
 
-Schema SVG este inclusă într-un `object`, cu `embed` și link drept alternative. Gameplay-ul YouTube este într-un `details`, cu link către înregistrarea originală. Cele șase profiluri păstrează propriile înregistrări și atribuiri.
+- `css/style.css` conține toate stilurile, ambele teme și adaptările responsive.
+- `js/theme.js` este singurul JavaScript: schimbă și memorează tema.
+- Selectorul folosește radio HTML și CSS `:has()`; întrebările și media suplimentară folosesc `details` și `summary`.
+- Formularul folosește validare HTML nativă. După o completare validă, `#confirmare` arată mesajul în aceeași pagină prin CSS `:target`.
+- Câmpurile nu au `name`; datele nu sunt salvate, trimise unei echipe sau incluse în URL. Caracterul demonstrativ este explicat înainte și după completare.
 
-## Formular și temă
+Funcțiile principale rămân utilizabile fără JavaScript. Este necesar un browser modern pentru `:has()`.
 
-Formularul este un exercițiu fără backend. Folosește `required`, tipuri de câmp, limite de lungime și intervale, iar `:user-invalid` semnalează erorile. După validare deschide confirmarea. Câmpurile nu au `name`, astfel încât datele personale nu ajung în URL și nu sunt trimise unei echipe. Acest lucru este explicat înainte de completare și pe confirmare.
+## Media și licențe
 
-Scriptul de temă memorează alegerea în `localStorage`. Fără JavaScript, CSS urmează preferința sistemului, iar selecția jocurilor, linkurile, formularul, întrebările și playerele rămân utilizabile.
+Site-ul păstrează `picture`, `img`, `audio`, `video`, `source`, `track`, `iframe`, `svg`, `object` și `embed`. Acestea apar în contextul jocurilor și consolelor. Animația locală de 8 secunde despre completarea unei linii este în fișa Tetris și are subtitrări românești, transcriere și schemă statică.
 
-## Licențe
+Capturile, ilustrațiile și demonstrația funcționează local. Înregistrările YouTube și Wikimedia necesită internet. Niciun material nu pornește automat.
 
-Capturile provin din [libretro-thumbnails](https://github.com/libretro-thumbnails); drepturile asupra jocurilor și imaginilor aparțin titularilor lor. [Archivo](https://github.com/google/fonts/tree/main/ofl/archivo), de Omnibus-Type, folosește SIL Open Font License; vezi `fonts/Archivo-OFL.txt`. Fontul Press Start 2P și licența din proiectul inițial sunt păstrate, dar nu sunt folosite de noua interfață. Materialele demonstrative locale sunt originale pentru acest proiect; sursele complete sunt în `assets/SOURCES.md`.
+`assets/SOURCES.md` documentează proveniența. Capturile sunt din libretro-thumbnails și aparțin titularilor jocurilor. Ilustrațiile și demonstrația schematică au fost realizate pentru acest ghid. Fontul local Archivo este distribuit sub SIL OFL; licența este în `fonts/Archivo-OFL.txt`.
+
+`RAPORT.md` explică tema, corespondența cu cerințele și structura pentru prezentarea proiectului.

@@ -12,32 +12,26 @@
     <script src="../js/theme.js"></script>
     <title>NES / Famicom — Retrocadia</title>
   </head>
-  <body>
+  <body class="console-profile profile-nes">
     <a class="skip-link" href="#continut">Sari la conținut</a>
     <header class="site-header">
       <a class="logo" href="../index.html"
         ><img
           src="../assets/favicon.svg"
-          width="26"
-          height="26"
-          alt=""
-        >retrocadia</a
-      >
+          width="30"
+          height="30"
+          alt="" >retrocadia<span class="logo-dot" aria-hidden="true"></span
+      ></a>
       <nav aria-label="Navigare principală">
         <ul class="nav-list">
-          <li><a href="../index.html">Colecția</a></li>
-          <li><a href="../games/index.html">Jocuri</a></li>
+          <li><a href="../index.html">Jocuri</a></li>
           <li>
-            <a href="../consoles/index.html" aria-current="page">Console</a>
+            <a href="../consoles/index.html" aria-current="true">Console</a>
           </li>
-          <li><a href="../pages/istorie.html">Cronologie</a></li>
-          <li><a href="../pages/ghid.html">Primii pași</a></li>
-          <li><a href="../pages/media.html">Imagine & sunet</a></li>
           <li><a href="../pages/propune.html">Propune un joc</a></li>
         </ul>
       </nav>
-      <div class="rail-bottom">
-        <p>Un ghid al jocurilor și consolelor de altădată.</p>
+      <div class="header-tools">
         <button
           class="theme-toggle"
           type="button"
@@ -55,7 +49,7 @@
             stroke-width="1.5"
             aria-hidden="true"
           >
-            <path d="M21 12.8A9 9 0 0 1 11.2 3 9 9 0 1 0 21 12.8Z" />
+            <path d="M21 12.8A9 9 0 0 1 11.2 3 9 9 0 1 0 21 12.8Z"></path>
           </svg>
           <svg
             class="theme-icon theme-icon-sun"
@@ -67,12 +61,12 @@
             stroke-width="1.5"
             aria-hidden="true"
           >
-            <circle cx="12" cy="12" r="4" />
+            <circle cx="12" cy="12" r="4"></circle>
             <path
               d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l2 2m10 10 2 2M5 19l2-2M17 7l2-2"
-            />
+            ></path>
           </svg>
-          <span>Aspect</span>
+          <span>Temă</span>
         </button>
       </div>
     </header>
@@ -99,16 +93,16 @@
                 ><span class="tag orange">8 biți</span>
               </div>
             </div>
-            <figure class="feature-image">
+            <figure class="feature-image hardware-figure">
               <img
-                src="../assets/images/super-mario-bros.png"
-                alt="Mario și blocuri în Super Mario Bros. pe NES"
-                width="256"
-                height="240"
+                src="../assets/images/nes-hardware.svg"
+                alt="Ilustrație a consolei NES și a controllerului cu două butoane de acțiune."
+                width="640"
+                height="420"
               >
               <figcaption>
-                Super Mario Bros., un joc pentru NES. Imaginea este o captură de
-                joc, nu o fotografie a consolei.
+                NES, modelul occidental cu încărcare frontală. Ilustrație
+                realizată pentru ghid.
               </figcaption>
             </figure>
           </div>
@@ -224,7 +218,7 @@
                 pentru semnalul video.
               </li>
             </ol>
-            <a class="text-link" href="../pages/ghid.html#platforme"
+            <a class="text-link" href="index.html#cum-joci"
               >Compară variantele de joc</a
             >
           </section>
@@ -266,8 +260,8 @@
             </p>
             <h3>Continuă lectura</h3>
             <p>
-              <a href="../pages/istorie.html">Cronologia Retrocadia</a> și
-              <a href="../pages/ghid.html#resurse"
+              <a href="index.html#cronologie">Cronologia Retrocadia</a> și
+              <a href="../index.html#resurse"
                 >resursele despre istoria jocurilor</a
               >
               oferă context suplimentar.
@@ -295,9 +289,10 @@
       </div>
     </main>
     <footer class="site-footer">
-      <p>Retrocadia · Proiect educațional</p>
-      <a href="../pages/ghid.html#resurse">Surse și licențe</a>
-      <span>2026</span>
+      <a class="footer-brand" href="../index.html">retrocadia</a>
+      <p>Jocuri vechi. Curiozitate nouă.</p>
+      <a href="../index.html#intrebari">Întrebări</a
+      ><a href="../index.html#resurse">Surse și licențe</a><span>© 2026</span>
     </footer>
   </body>
 </html>

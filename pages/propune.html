@@ -18,19 +18,14 @@
       <a class="logo" href="../index.html"
         ><img
           src="../assets/favicon.svg"
-          width="26"
-          height="26"
-          alt=""
-        >retrocadia</a
-      >
+          width="30"
+          height="30"
+          alt="" >retrocadia<span class="logo-dot" aria-hidden="true"></span
+      ></a>
       <nav aria-label="Navigare principală">
         <ul class="nav-list">
-          <li><a href="../index.html">Colecția</a></li>
-          <li><a href="../games/index.html">Jocuri</a></li>
+          <li><a href="../index.html">Jocuri</a></li>
           <li><a href="../consoles/index.html">Console</a></li>
-          <li><a href="../pages/istorie.html">Cronologie</a></li>
-          <li><a href="../pages/ghid.html">Primii pași</a></li>
-          <li><a href="../pages/media.html">Imagine & sunet</a></li>
           <li>
             <a href="../pages/propune.html" aria-current="page"
               >Propune un joc</a
@@ -38,8 +33,7 @@
           </li>
         </ul>
       </nav>
-      <div class="rail-bottom">
-        <p>Un ghid al jocurilor și consolelor de altădată.</p>
+      <div class="header-tools">
         <button
           class="theme-toggle"
           type="button"
@@ -57,7 +51,7 @@
             stroke-width="1.5"
             aria-hidden="true"
           >
-            <path d="M21 12.8A9 9 0 0 1 11.2 3 9 9 0 1 0 21 12.8Z" />
+            <path d="M21 12.8A9 9 0 0 1 11.2 3 9 9 0 1 0 21 12.8Z"></path>
           </svg>
           <svg
             class="theme-icon theme-icon-sun"
@@ -69,12 +63,12 @@
             stroke-width="1.5"
             aria-hidden="true"
           >
-            <circle cx="12" cy="12" r="4" />
+            <circle cx="12" cy="12" r="4"></circle>
             <path
               d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l2 2m10 10 2 2M5 19l2-2M17 7l2-2"
-            />
+            ></path>
           </svg>
-          <span>Aspect</span>
+          <span>Temă</span>
         </button>
       </div>
     </header>
@@ -89,9 +83,24 @@
         </div>
       </section>
       <section class="section container form-layout" aria-labelledby="formular">
+        <section
+          id="confirmare"
+          class="inline-confirmation"
+          tabindex="-1"
+          aria-labelledby="confirm-heading"
+        >
+          <span class="confirmation-symbol" aria-hidden="true"></span>
+          <h2 id="confirm-heading">Formular completat.</h2>
+          <p>
+            Ai ajuns la finalul exercițiului. Acest formular este demonstrativ:
+            recomandarea nu este salvată și nu este trimisă unei echipe.
+          </p>
+          <a class="button" href="propune.html">Completează altă recomandare</a
+          ><a class="text-link" href="../index.html">Înapoi la jocuri</a>
+        </section>
         <form
           class="suggestion-form"
-          action="multumim.html"
+          action="propune.html#confirmare"
           method="get"
           aria-labelledby="formular"
         >
@@ -216,14 +225,14 @@
         <aside class="form-aside" aria-labelledby="idee">
           <figure class="reference-image">
             <img
-              src="../assets/images/tetris-game-boy.png"
-              width="160"
-              height="144"
-              alt="Tetris pe Game Boy, un exemplu de ediție care poate fi precizată într-o recomandare."
+              src="../assets/images/game-boy-hardware.svg"
+              width="640"
+              height="420"
+              alt="Ilustrație a consolei portabile Game Boy, cu ecran verde și butoane A și B."
             >
             <figcaption>
-              Un titlu poate avea mai multe ediții. Precizează consola, dacă o
-              cunoști.
+              Game Boy: o recomandare este mai clară când precizezi consola și
+              ediția.
             </figcaption>
           </figure>
           <p class="form-notice">
@@ -288,17 +297,16 @@
           <section>
             <h3>Ai nevoie de inspirație?</h3>
             <p>Compară genurile și edițiile din selecția actuală.</p>
-            <a class="text-link" href="../games/index.html"
-              >Explorează jocurile</a
-            >
+            <a class="text-link" href="../index.html">Înapoi la jocuri</a>
           </section>
         </aside>
       </section>
     </main>
     <footer class="site-footer">
-      <p>Retrocadia · Proiect educațional</p>
-      <a href="../pages/ghid.html#resurse">Surse și licențe</a>
-      <span>2026</span>
+      <a class="footer-brand" href="../index.html">retrocadia</a>
+      <p>Jocuri vechi. Curiozitate nouă.</p>
+      <a href="../index.html#intrebari">Întrebări</a
+      ><a href="../index.html#resurse">Surse și licențe</a><span>© 2026</span>
     </footer>
   </body>
 </html>

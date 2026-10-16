@@ -12,30 +12,24 @@
     <script src="../js/theme.js"></script>
     <title>Super Mario Bros. — Retrocadia</title>
   </head>
-  <body>
+  <body class="game-profile profile-super-mario-bros">
     <a class="skip-link" href="#continut">Sari la conținut</a>
     <header class="site-header">
       <a class="logo" href="../index.html"
         ><img
           src="../assets/favicon.svg"
-          width="26"
-          height="26"
-          alt=""
-        >retrocadia</a
-      >
+          width="30"
+          height="30"
+          alt="" >retrocadia<span class="logo-dot" aria-hidden="true"></span
+      ></a>
       <nav aria-label="Navigare principală">
         <ul class="nav-list">
-          <li><a href="../index.html">Colecția</a></li>
-          <li><a href="../games/index.html" aria-current="page">Jocuri</a></li>
+          <li><a href="../index.html" aria-current="true">Jocuri</a></li>
           <li><a href="../consoles/index.html">Console</a></li>
-          <li><a href="../pages/istorie.html">Cronologie</a></li>
-          <li><a href="../pages/ghid.html">Primii pași</a></li>
-          <li><a href="../pages/media.html">Imagine & sunet</a></li>
           <li><a href="../pages/propune.html">Propune un joc</a></li>
         </ul>
       </nav>
-      <div class="rail-bottom">
-        <p>Un ghid al jocurilor și consolelor de altădată.</p>
+      <div class="header-tools">
         <button
           class="theme-toggle"
           type="button"
@@ -53,7 +47,7 @@
             stroke-width="1.5"
             aria-hidden="true"
           >
-            <path d="M21 12.8A9 9 0 0 1 11.2 3 9 9 0 1 0 21 12.8Z" />
+            <path d="M21 12.8A9 9 0 0 1 11.2 3 9 9 0 1 0 21 12.8Z"></path>
           </svg>
           <svg
             class="theme-icon theme-icon-sun"
@@ -65,12 +59,12 @@
             stroke-width="1.5"
             aria-hidden="true"
           >
-            <circle cx="12" cy="12" r="4" />
+            <circle cx="12" cy="12" r="4"></circle>
             <path
               d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l2 2m10 10 2 2M5 19l2-2M17 7l2-2"
-            />
+            ></path>
           </svg>
-          <span>Aspect</span>
+          <span>Temă</span>
         </button>
       </div>
     </header>
@@ -79,8 +73,7 @@
         <div class="container">
           <nav class="breadcrumbs" aria-label="Fir de navigare">
             <ol>
-              <li><a href="../index.html">Colecția</a></li>
-              <li><a href="index.html">Jocuri</a></li>
+              <li><a href="../index.html">Jocuri</a></li>
               <li aria-current="page">Super Mario Bros.</li>
             </ol>
           </nav>
@@ -257,10 +250,13 @@
             </p>
             <h3>Surse și context</h3>
             <p>
-              <a href="../pages/ghid.html#resurse"
+              <a href="../index.html#resurse"
                 >Sursele proiectului și ale capturilor</a
               >
-              · <a href="../pages/istorie.html">Cronologia consolelor</a>
+              ·
+              <a href="../consoles/index.html#cronologie"
+                >Cronologia consolelor</a
+              >
             </p>
           </section>
         </div>
@@ -293,9 +289,10 @@
       </div>
     </main>
     <footer class="site-footer">
-      <p>Retrocadia · Proiect educațional</p>
-      <a href="../pages/ghid.html#resurse">Surse și licențe</a>
-      <span>2026</span>
+      <a class="footer-brand" href="../index.html">retrocadia</a>
+      <p>Jocuri vechi. Curiozitate nouă.</p>
+      <a href="../index.html#intrebari">Întrebări</a
+      ><a href="../index.html#resurse">Surse și licențe</a><span>© 2026</span>
     </footer>
   </body>
 </html>

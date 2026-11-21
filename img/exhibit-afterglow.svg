@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="A television glowing alone in a dark room after everyone has gone to bed">
+  <defs>
+    <linearGradient id="agBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a0b12"/><stop offset="1" stop-color="#141020"/>
+    </linearGradient>
+    <pattern id="agGrid" width="26" height="26" patternUnits="userSpaceOnUse">
+      <path d="M26 0H0V26" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+    <radialGradient id="agGlow" cx="0.5" cy="0.42" r="0.55">
+      <stop offset="0" stop-color="#2fe6ff" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#2fe6ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="agScreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#123a4d"/><stop offset="1" stop-color="#0a1c2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="320" fill="url(#agBg)"/>
+  <rect width="480" height="320" fill="url(#agGrid)"/>
+  <ellipse cx="240" cy="150" rx="210" ry="150" fill="url(#agGlow)"/>
+
+  <rect x="140" y="92" width="200" height="160" rx="16" fill="#1a1f2b" stroke="#333b4d" stroke-width="3"/>
+  <rect x="154" y="106" width="172" height="126" rx="10" fill="url(#agScreen)"/>
+  <rect x="154" y="106" width="172" height="126" rx="10" fill="none" stroke="#2fe6ff" stroke-opacity="0.4" stroke-width="2"/>
+  <g fill="#2fe6ff" opacity="0.65">
+    <rect x="176" y="150" width="10" height="10"/><rect x="192" y="140" width="20" height="10"/>
+    <rect x="218" y="150" width="10" height="10"/><rect x="244" y="132" width="16" height="10"/>
+    <rect x="270" y="146" width="10" height="10"/><rect x="288" y="156" width="20" height="10"/>
+  </g>
+  <rect x="196" y="252" width="88" height="14" rx="5" fill="#232a38"/>
+  <rect x="164" y="266" width="152" height="12" rx="6" fill="#232a38"/>
+  <circle cx="318" cy="120" r="5" fill="#ff4f9a"/>
+</svg>

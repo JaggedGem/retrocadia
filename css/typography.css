@@ -1,0 +1,245 @@
+/* ==========================================================================
+   Retrocadia — typography
+   Two local families: a pixel display face for arcade labels, and a flexible
+   humanist sans for anything that needs to be read at length.
+   ========================================================================== */
+
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("../fonts/PressStart2P.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Google Sans Flex";
+  src: url("../fonts/GoogleSansFlex.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---- Headings ---------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-body);
+  color: var(--text);
+  line-height: 1.12;
+  text-wrap: balance;
+  font-weight: 760;
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-size: var(--step-4);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  font-weight: 820;
+}
+
+h2 {
+  font-size: var(--step-3);
+}
+
+h3 {
+  font-size: var(--step-1);
+}
+
+h4 {
+  font-size: var(--step-0);
+  font-weight: 700;
+}
+
+/* ---- Vertical rhythm ----------------------------------------------------
+   The reset zeroes every margin, so the gaps between reading blocks are set
+   deliberately here. :where() keeps specificity low so components can
+   override a single rule without !important. */
+:where(h2, h3, h4) {
+  margin-block: 0 0.9em;
+}
+
+/* Pixel-face utility pieces (also used by components). */
+.eyebrow,
+.brand,
+.button,
+.tag,
+.stat__label,
+.nav-list a,
+.signal-screen strong,
+.signal-label {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+/* ---- Body copy --------------------------------------------------------- */
+p {
+  text-wrap: pretty;
+}
+
+p + p {
+  margin-top: 0.85em;
+}
+
+a {
+  color: var(--cyan);
+  text-decoration-color: color-mix(in srgb, var(--cyan) 55%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  transition:
+    color var(--dur-fast) var(--ease-out),
+    text-decoration-color var(--dur-fast) var(--ease-out);
+}
+
+a:hover {
+  color: var(--magenta);
+  text-decoration-color: currentColor;
+}
+
+a:visited {
+  color: color-mix(in srgb, var(--cyan) 82%, var(--violet));
+}
+
+a:active {
+  color: var(--amber);
+}
+
+strong,
+b {
+  color: var(--lime);
+  font-weight: 700;
+}
+
+em,
+i {
+  color: var(--amber);
+  font-style: italic;
+}
+
+small {
+  font-size: var(--step--1);
+  color: var(--text-muted);
+}
+
+mark {
+  background: linear-gradient(transparent 55%, rgba(255, 194, 71, 0.45) 55%);
+  color: var(--text);
+  padding: 0 0.15em;
+}
+
+abbr[title] {
+  text-decoration: underline dotted var(--text-muted);
+  text-underline-offset: 0.25em;
+  cursor: help;
+}
+
+code,
+kbd,
+samp {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  color: var(--amber);
+  background: var(--ink-800);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-xs);
+  padding: 0.12em 0.4em;
+}
+
+kbd {
+  color: var(--text);
+  box-shadow: 0 2px 0 var(--ink-600);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line), transparent);
+  margin-block: var(--space-lg);
+}
+
+/* ---- Lists ------------------------------------------------------------- */
+ul:not([class]),
+ol:not([class]) {
+  padding-left: 1.3rem;
+}
+
+ul:not([class]) li::marker {
+  color: var(--cyan);
+}
+
+ol:not([class]) li::marker {
+  color: var(--magenta);
+  font-family: var(--font-display);
+  font-size: 0.7em;
+}
+
+li + li {
+  margin-top: 0.35rem;
+}
+
+/* ---- Long-form reading block ------------------------------------------- */
+.prose {
+  max-width: 62ch;
+}
+
+.prose > p:first-of-type::first-letter {
+  float: left;
+  font-family: var(--font-display);
+  font-size: 2.9em;
+  line-height: 0.82;
+  padding: 0.12em 0.16em 0 0;
+  color: var(--cyan);
+  text-shadow: 0 0 18px rgba(47, 230, 255, 0.5);
+}
+
+.prose > p:first-of-type::first-line {
+  font-weight: 560;
+  color: var(--text-soft);
+}
+
+/* ---- Blockquote -------------------------------------------------------- */
+blockquote {
+  position: relative;
+  margin-block: 2em 0;
+  padding: 0.4rem 0 0.4rem 3.2rem;
+  color: var(--text-soft);
+  font-size: var(--step-1);
+  font-weight: 400;
+  font-style: italic;
+  quotes: "\201C" "\201D";
+}
+
+blockquote::before {
+  content: open-quote;
+  position: absolute;
+  left: 0;
+  top: -0.35rem;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--magenta);
+  text-shadow: 0 0 20px rgba(255, 79, 154, 0.45);
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 0.8rem;
+  font-family: var(--font-display);
+  font-size: var(--step--2);
+  font-style: normal;
+  letter-spacing: 0.02em;
+  color: var(--text-faint);
+}
+
+blockquote cite::before {
+  content: "\2014\00A0";
+  color: var(--cyan);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .prose > p:first-of-type::first-letter {
+    animation: drop-cap-glow 4s var(--ease-in-out) infinite;
+  }
+}

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Stylised illustration of a Nintendo 64 console with its three-pronged controller">
+  <defs>
+    <linearGradient id="n64Bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#191c28"/><stop offset="1" stop-color="#0a0b12"/>
+    </linearGradient>
+    <pattern id="n64Grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+    <linearGradient id="n64Shell" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a3f49"/><stop offset="1" stop-color="#1b1e25"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="320" fill="url(#n64Bg)"/>
+  <rect width="480" height="320" fill="url(#n64Grid)"/>
+  <ellipse cx="240" cy="150" rx="210" ry="120" fill="#2fe6ff" opacity="0.12"/>
+
+  <path d="M120 92 h240 a20 20 0 0 1 20 20 v96 a20 20 0 0 1 -20 20 h-240 a20 20 0 0 1 -20 -20 v-96 a20 20 0 0 1 20 -20 z" fill="url(#n64Shell)"/>
+  <path d="M150 92 h180 l-24 30 h-132 z" fill="#0b0d11"/>
+  <rect x="182" y="70" width="116" height="26" rx="4" fill="#4a505c"/>
+
+  <circle cx="150" cy="196" r="14" fill="#2fe6ff"/>
+  <circle cx="360" cy="196" r="14" fill="#b6ff4d"/>
+  <rect x="196" y="150" width="88" height="60" rx="8" fill="#2a2f39"/>
+  <rect x="212" y="162" width="24" height="14" rx="3" fill="#ffcb45"/>
+  <rect x="244" y="162" width="24" height="14" rx="3" fill="#ff4f9a"/>
+
+  <g transform="translate(0,26)">
+    <path d="M214 150 l26 -18 l26 18 v34 l-26 18 l-26 -18 z" fill="#2a2f39"/>
+    <circle cx="240" cy="160" r="7" fill="#9aa4b8"/>
+    <rect x="196" y="182" width="34" height="14" rx="7" fill="#3a3f49"/>
+    <rect x="250" y="182" width="34" height="14" rx="7" fill="#3a3f49"/>
+  </g>
+</svg>

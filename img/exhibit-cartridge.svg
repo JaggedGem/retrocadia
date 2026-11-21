@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="A shelf of stacked game cartridges with handwritten labels">
+  <defs>
+    <linearGradient id="cgBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b1e2b"/><stop offset="1" stop-color="#0a0b12"/>
+    </linearGradient>
+    <pattern id="cgGrid" width="26" height="26" patternUnits="userSpaceOnUse">
+      <path d="M26 0H0V26" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="320" fill="url(#cgBg)"/>
+  <rect width="480" height="320" fill="url(#cgGrid)"/>
+  <ellipse cx="240" cy="160" rx="200" ry="120" fill="#ffcb45" opacity="0.11"/>
+
+  <g>
+    <rect x="96" y="120" width="288" height="46" rx="6" fill="#4a5266"/>
+    <rect x="104" y="108" width="272" height="40" rx="6" fill="#5b6480"/>
+    <rect x="112" y="116" width="256" height="24" rx="4" fill="#dfe2ee" opacity="0.85"/>
+    <rect x="120" y="124" width="120" height="8" rx="4" fill="#8a90a8"/>
+  </g>
+  <g>
+    <rect x="106" y="176" width="268" height="46" rx="6" fill="#3f4658"/>
+    <rect x="114" y="164" width="252" height="40" rx="6" fill="#6a5ae0"/>
+    <rect x="122" y="172" width="236" height="24" rx="4" fill="#e6e4ff" opacity="0.9"/>
+    <rect x="130" y="180" width="150" height="8" rx="4" fill="#9a8ce6"/>
+  </g>
+  <g>
+    <rect x="116" y="232" width="248" height="46" rx="6" fill="#3f4658"/>
+    <rect x="124" y="220" width="232" height="40" rx="6" fill="#ff6a3d"/>
+    <rect x="132" y="228" width="216" height="24" rx="4" fill="#ffe6dc" opacity="0.92"/>
+    <rect x="140" y="236" width="100" height="8" rx="4" fill="#e0a23c"/>
+  </g>
+</svg>

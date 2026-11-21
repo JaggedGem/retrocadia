@@ -1,0 +1,655 @@
+/* ==========================================================================
+   Retrocadia — layout & structure
+   ========================================================================== */
+
+/* Shared centred container. */
+.site-main,
+.site-header__inner,
+.site-footer__inner {
+  width: min(100% - var(--gutter) * 2, var(--content));
+  margin-inline: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Header / navigation
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background: color-mix(in srgb, var(--ink-950) 78%, transparent);
+  backdrop-filter: blur(16px) saturate(140%);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+/* Neon progress hairline along the very top of the viewport. */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--violet),
+    var(--cyan) 35%,
+    var(--lime) 60%,
+    var(--amber) 80%,
+    var(--magenta)
+  );
+  opacity: 0.7;
+}
+
+.site-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--space-md);
+  min-height: 4.75rem;
+}
+
+.brand {
+  order: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text);
+  font-size: var(--step-0);
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand::before {
+  content: "";
+  width: 0.85rem;
+  height: 0.85rem;
+  background: linear-gradient(135deg, var(--cyan), var(--magenta));
+  box-shadow: 0 0 14px rgba(47, 230, 255, 0.55);
+  border-radius: 2px;
+  animation: brand-pulse 3.4s var(--ease-in-out) infinite;
+}
+
+.brand::after {
+  content: "";
+  width: 0.5ch;
+  height: 1em;
+  background: var(--cyan);
+  animation: caret-blink 1.15s steps(2, jump-none) infinite;
+}
+
+.brand:hover,
+.brand:focus-visible {
+  color: var(--cyan);
+}
+
+/* Mobile toggle button (progressive enhancement, works without JS). */
+.nav-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.nav-toggle {
+  order: 2;
+  margin-left: auto;
+  position: relative;
+  width: 2.85rem;
+  height: 2.85rem;
+  display: grid;
+  place-items: center;
+  color: var(--cyan);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--ink-850);
+  cursor: pointer;
+  transition:
+    border-color var(--dur) var(--ease-out),
+    box-shadow var(--dur) var(--ease-out);
+}
+
+.nav-toggle:hover {
+  border-color: var(--cyan);
+  box-shadow: var(--glow-cyan);
+}
+
+.nav-toggle__bar,
+.nav-toggle::before,
+.nav-toggle::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1.35rem;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition:
+    transform var(--dur) var(--ease-spring),
+    opacity var(--dur-fast) linear;
+}
+
+.nav-toggle__bar {
+  transform: translate(-50%, -50%);
+}
+.nav-toggle::before {
+  content: "";
+  transform: translate(-50%, -50%) translateY(-6px);
+}
+.nav-toggle::after {
+  content: "";
+  transform: translate(-50%, -50%) translateY(6px);
+}
+
+.site-header:has(.nav-input:checked) .nav-toggle__bar {
+  opacity: 0;
+  transform: translate(-50%, -50%) scaleX(0.2);
+}
+
+.site-header:has(.nav-input:checked) .nav-toggle::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.site-header:has(.nav-input:checked) .nav-toggle::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.nav-input:focus-visible ~ .site-header__inner .nav-toggle {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+}
+
+/* Collapsible nav: closed by default on small screens. */
+.site-nav {
+  order: 3;
+  flex: 1 1 100%;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--dur) var(--ease-out);
+}
+
+.site-nav__panel {
+  min-height: 0;
+  overflow: hidden;
+  /* Keep the collapsed links out of the tab order and the a11y tree. */
+  visibility: hidden;
+  transition: visibility 0s linear var(--dur);
+}
+
+.site-header:has(.nav-input:checked) .site-nav {
+  grid-template-rows: 1fr;
+}
+
+.site-header:has(.nav-input:checked) .site-nav__panel {
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  list-style: none;
+  margin: 0;
+  /* Room on the left for the square marker, which sits outside the link box. */
+  padding: 0.35rem 0 1rem 1.15rem;
+}
+
+/* The prose rule `li + li` adds a top margin; the nav spaces itself with gap,
+   so clear it or the first link sits 5.6px higher than the rest. */
+.nav-list li + li {
+  margin-top: 0;
+}
+
+.nav-list a {
+  position: relative;
+  display: block;
+  padding: 0.6rem 0.25rem;
+  font-size: var(--step--2);
+  line-height: 2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-muted);
+  transition:
+    color var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+
+.nav-list a::before {
+  content: "";
+  position: absolute;
+  left: -0.9rem;
+  top: 50%;
+  width: 0.45rem;
+  height: 0.45rem;
+  background: var(--cyan);
+  transform: translateY(-50%) scale(0);
+  transition: transform var(--dur) var(--ease-spring);
+}
+
+.nav-list a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.35rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cyan), var(--magenta));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur) var(--ease-out);
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible {
+  color: var(--text);
+}
+
+.nav-list a:hover::after,
+.nav-list a:focus-visible::after,
+.nav-list a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+.nav-list a:hover::before,
+.nav-list a:focus-visible::before,
+.nav-list a[aria-current="page"]::before {
+  transform: translateY(-50%) scale(1);
+}
+
+.nav-list a[aria-current="page"] {
+  color: var(--cyan);
+}
+
+/* Tablet and up: single-row header, always-visible inline nav. */
+@media (min-width: 48rem) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    order: 2;
+    flex: 1 1 auto;
+    margin-left: auto;
+    grid-template-rows: 1fr;
+    overflow: visible;
+  }
+
+  .site-nav__panel {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(1rem, 3vw, 2.25rem);
+    overflow: visible;
+    visibility: visible;
+    transition: none;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(0.75rem, 2.4vw, 1.9rem);
+    padding: 0;
+  }
+
+  .nav-list a {
+    padding: 0.35rem 0;
+  }
+
+  .nav-list a::before {
+    top: auto;
+    bottom: calc(-1.15rem + 10px);
+    left: 50%;
+    transform: translate(-50%, 0) scale(0);
+  }
+
+  .nav-list a::after {
+    bottom: 0;
+  }
+
+  .nav-list a:hover::before,
+  .nav-list a:focus-visible::before,
+  .nav-list a[aria-current="page"]::before {
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Main column & sections
+   -------------------------------------------------------------------------- */
+.site-main {
+  padding-block: clamp(2.25rem, 5vw, 4rem) var(--space-2xl);
+}
+
+.section {
+  margin-top: var(--section-gap);
+}
+
+/* The quick-facts strip belongs to the exhibit above it, but needs air. */
+.hero + .facts {
+  margin-top: var(--space-2xl);
+}
+
+.section--flush {
+  margin-top: 0;
+}
+
+.section-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: var(--space-lg);
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: clamp(3rem, 12%, 8rem);
+  height: 2px;
+  background: linear-gradient(90deg, var(--cyan), transparent);
+}
+
+.section-heading h2 {
+  font-size: var(--step-2);
+  margin: 0;
+}
+
+.section-heading p:not(.eyebrow) {
+  color: var(--text-muted);
+  font-size: var(--step--1);
+  max-width: 44ch;
+}
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  padding: clamp(1.6rem, 4vw, 3.25rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(
+      155deg,
+      rgba(47, 230, 255, 0.08),
+      rgba(157, 123, 255, 0.07) 42%,
+      transparent 72%
+    ),
+    var(--ink-850);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(150, 172, 226, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(150, 172, 226, 0.06) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(120% 100% at 100% 0%, #000 10%, transparent 72%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -10%;
+  width: 40%;
+  height: 220%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(47, 230, 255, 0.08),
+    transparent
+  );
+  transform: rotate(14deg);
+  animation: hero-sheen 9s var(--ease-in-out) infinite;
+  pointer-events: none;
+}
+
+.hero__copy {
+  position: relative;
+  z-index: 1;
+  max-width: 44rem;
+}
+
+.hero h1 {
+  margin: 0.35rem 0 1.75rem;
+}
+
+.hero__lead {
+  color: var(--text-soft);
+  font-size: var(--step-1);
+  max-width: 56ch;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1.9rem;
+}
+
+.hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.75rem;
+  margin-top: 3rem;
+  padding-top: 2.2rem;
+  border-top: 1px dashed var(--line);
+  list-style: none;
+}
+
+.hero__stats li {
+  margin: 0;
+}
+
+/* Keep the long labels from crowding the gaps at desktop widths. */
+.hero__stats .stat__label {
+  font-size: 0.64rem;
+}
+
+.hero__art {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  border-radius: var(--radius);
+  animation: float-y 6.5s var(--ease-in-out) infinite;
+}
+
+.hero__art img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-pop);
+}
+
+@media (min-width: 60rem) {
+  .hero {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Generic grids
+   -------------------------------------------------------------------------- */
+.grid-cards {
+  display: grid;
+  gap: clamp(1rem, 2.4vw, 1.6rem);
+  grid-template-columns: 1fr;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.5rem, 4vw, 2.75rem);
+}
+
+@media (min-width: 40rem) {
+  .grid-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .grid-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .split {
+    grid-template-columns: minmax(0, 1.4fr) minmax(17rem, 0.85fr);
+    align-items: start;
+  }
+
+  .split--reverse {
+    grid-template-columns: minmax(17rem, 0.85fr) minmax(0, 1.4fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+  position: relative;
+  border-top: 1px solid var(--line);
+  background: linear-gradient(var(--ink-900), var(--ink-950));
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  opacity: 0.5;
+}
+
+.site-footer__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  padding-block: var(--space-xl);
+}
+
+.site-footer h2 {
+  font-family: var(--font-display);
+  font-size: var(--step--2);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 0.9rem;
+}
+
+.footer-brand .brand {
+  font-size: var(--step-1);
+}
+
+.footer-brand p {
+  margin-top: 1rem;
+  color: var(--text-muted);
+  max-width: 34ch;
+}
+
+.footer-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.footer-nav a {
+  color: var(--text-soft);
+  text-decoration: none;
+  font-size: var(--step--1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-nav a::before {
+  content: "";
+  width: 0.4rem;
+  height: 0.4rem;
+  background: var(--cyan);
+  transform: rotate(45deg) scale(0);
+  transition: transform var(--dur) var(--ease-spring);
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus-visible {
+  color: var(--cyan);
+}
+
+.footer-nav a:hover::before,
+.footer-nav a:focus-visible::before {
+  transform: rotate(45deg) scale(1);
+}
+
+.site-footer__bottom {
+  width: min(100% - var(--gutter) * 2, var(--content));
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding-block: 1.4rem;
+  border-top: 1px solid var(--line-soft);
+  color: var(--text-faint);
+  font-size: var(--step--1);
+}
+
+.to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: var(--step--2);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.to-top::after {
+  content: "\2191";
+  transition: transform var(--dur) var(--ease-spring);
+}
+
+.to-top:hover,
+.to-top:focus-visible {
+  color: var(--cyan);
+}
+
+.to-top:hover::after,
+.to-top:focus-visible::after {
+  transform: translateY(-4px);
+}
+
+@media (min-width: 48rem) {
+  .site-footer__inner {
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  }
+}

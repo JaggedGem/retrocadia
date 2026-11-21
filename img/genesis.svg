@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Stylised illustration of a Sega Genesis console with controller">
+  <defs>
+    <linearGradient id="genBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#191c28"/><stop offset="1" stop-color="#0a0b12"/>
+    </linearGradient>
+    <pattern id="genGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+    <linearGradient id="genShell" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#33383f"/><stop offset="1" stop-color="#15181e"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="320" fill="url(#genBg)"/>
+  <rect width="480" height="320" fill="url(#genGrid)"/>
+  <ellipse cx="240" cy="150" rx="210" ry="120" fill="#ff4f4f" opacity="0.12"/>
+
+  <rect x="64" y="120" width="352" height="140" rx="14" fill="url(#genShell)" stroke="#4a515c" stroke-width="2"/>
+  <rect x="64" y="196" width="352" height="64" rx="12" fill="#101318"/>
+
+  <rect x="150" y="96" width="180" height="30" rx="4" fill="#0b0d11"/>
+  <rect x="160" y="80" width="160" height="24" rx="4" fill="#3c424c"/>
+
+  <circle cx="106" cy="140" r="7" fill="#ff4f4f"/>
+  <circle cx="398" cy="140" r="9" fill="#e8e8ee"/>
+  <rect x="368" y="116" width="60" height="14" rx="4" fill="#c9ccd6" opacity="0.85"/>
+  <rect x="196" y="128" width="88" height="12" rx="3" fill="#c9ccd6" opacity="0.6"/>
+
+  <rect x="126" y="224" width="52" height="22" rx="11" fill="#2a2f37"/>
+  <rect x="302" y="224" width="52" height="22" rx="11" fill="#2a2f37"/>
+  <path d="M196 216 h88 l-10 34 h-68 z" fill="#3c424c" opacity="0.8"/>
+</svg>

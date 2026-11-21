@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="A worn game controller with a directional pad and coloured buttons">
+  <defs>
+    <linearGradient id="inBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b1e2b"/><stop offset="1" stop-color="#0a0b12"/>
+    </linearGradient>
+    <pattern id="inGrid" width="26" height="26" patternUnits="userSpaceOnUse">
+      <path d="M26 0H0V26" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+    <linearGradient id="pad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2c3243"/><stop offset="1" stop-color="#171b26"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="320" fill="url(#inBg)"/>
+  <rect width="480" height="320" fill="url(#inGrid)"/>
+  <ellipse cx="240" cy="160" rx="200" ry="120" fill="#ff4f9a" opacity="0.13"/>
+
+  <path d="M120 150 q0 -56 56 -56 h128 q56 0 56 56 v34 q0 54 -54 62 q-30 5 -46 -16 l-12 -18 h-48 l-12 18 q-16 21 -46 16 q-54 -8 -54 -62 z" fill="url(#pad)" stroke="#3d4457" stroke-width="2"/>
+  <path d="M150 128 q90 -22 180 0" fill="none" stroke="#4a5266" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+
+  <g fill="#2a3142">
+    <rect x="150" y="140" width="16" height="52" rx="5"/>
+    <rect x="132" y="158" width="52" height="16" rx="5"/>
+    <circle cx="158" cy="166" r="4" fill="#2fe6ff" opacity="0.6"/>
+  </g>
+  <circle cx="322" cy="148" r="15" fill="#ff4f9a"/>
+  <circle cx="356" cy="168" r="15" fill="#ffcb45"/>
+  <circle cx="300" cy="178" r="15" fill="#2fe6ff"/>
+  <circle cx="334" cy="196" r="15" fill="#b6ff4d"/>
+  <rect x="214" y="150" width="52" height="12" rx="6" fill="#2a3142"/>
+  <rect x="228" y="176" width="24" height="10" rx="5" fill="#2a3142"/>
+</svg>

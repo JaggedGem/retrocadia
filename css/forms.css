@@ -1,0 +1,269 @@
+/* ==========================================================================
+   Retrocadia — forms
+   ========================================================================== */
+
+.form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  /* Never stretch a field to match a taller neighbour: the stretch would
+     inflate the label row and push its control below the next column's. */
+  align-items: start;
+}
+
+/* Give the whole form extra air below the panel's intro copy. */
+.panel > .form {
+  margin-top: 2rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.65rem;
+  /* Auto rows must keep their intrinsic height, so the label and the
+     control stay flush at the top of every field. */
+  align-content: start;
+}
+
+.field > label,
+.field > legend {
+  font-weight: 650;
+  color: var(--text-soft);
+  letter-spacing: 0.01em;
+}
+
+/* Required marker driven purely by markup state. */
+.field > label:has(+ [required])::after {
+  content: " \2217";
+  color: var(--magenta);
+}
+
+/* Optional marker for contrast. */
+.field > label:has(+ [optional])::before {
+  content: "optional ";
+  font-family: var(--font-display);
+  font-size: var(--step--2);
+  color: var(--text-faint);
+}
+
+.field__hint {
+  font-size: var(--step--1);
+  color: var(--text-faint);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.85rem 0.95rem;
+  color: var(--text);
+  background: var(--ink-950);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out);
+}
+
+textarea {
+  min-height: 9.5rem;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+::placeholder {
+  color: var(--text-faint);
+  opacity: 1;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--line-strong);
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border-color: var(--cyan);
+  box-shadow:
+    0 0 0 3px color-mix(in srgb, var(--cyan) 22%, transparent),
+    var(--glow-cyan);
+}
+
+.field:focus-within > label {
+  color: var(--cyan);
+}
+
+/* Live validation feedback once the user has interacted. */
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+  border-color: var(--magenta);
+  background: color-mix(in srgb, var(--magenta) 7%, var(--ink-950));
+}
+
+input:user-valid,
+select:user-valid,
+textarea:user-valid {
+  border-color: color-mix(in srgb, var(--lime) 55%, var(--line));
+}
+
+/* Range-limited numeric input sits on the accent when out of bounds. */
+input[type="number"]:out-of-range {
+  border-color: var(--orange);
+}
+
+input[type="number"]:in-range:user-valid {
+  border-color: color-mix(in srgb, var(--lime) 55%, var(--line));
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: var(--ink-800);
+}
+
+input:read-only {
+  background: var(--ink-800);
+  color: var(--text-muted);
+}
+
+/* ---- Custom select ----------------------------------------------------- */
+.select {
+  position: relative;
+}
+
+.select select {
+  /* Block flow kills the inline-block line box, so the select fills its
+     wrapper exactly and sits flush with neighbouring text inputs. */
+  display: block;
+  appearance: none;
+  padding-right: 2.75rem;
+}
+
+.select::after {
+  content: "";
+  position: absolute;
+  right: 1.1rem;
+  top: 50%;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-right: 2px solid var(--cyan);
+  border-bottom: 2px solid var(--cyan);
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+  transition: transform var(--dur) var(--ease-out);
+}
+
+.select:focus-within::after {
+  transform: translateY(-30%) rotate(225deg);
+}
+
+/* ---- Checkboxes / radios ---------------------------------------------- */
+.choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  font-weight: 450;
+  color: var(--text-soft);
+  cursor: pointer;
+}
+
+.choice input {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: 0 0 auto;
+  margin-top: 0.15rem;
+  accent-color: var(--cyan);
+}
+
+.choice input:checked + span {
+  color: var(--text);
+}
+
+/* ---- File input -------------------------------------------------------- */
+input[type="file"] {
+  padding: 0.6rem;
+}
+
+input[type="file"]::file-selector-button {
+  margin-right: 0.9rem;
+  padding: 0.55rem 0.9rem;
+  font-family: var(--font-display);
+  font-size: var(--step--2);
+  color: var(--ink-950);
+  background: var(--cyan);
+  border: 0;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out);
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: var(--amber);
+}
+
+/* ---- Fieldset ---------------------------------------------------------- */
+fieldset {
+  display: grid;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 1.3rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--ink-800) 60%, transparent);
+}
+
+legend {
+  padding: 0 0.6rem;
+  font-family: var(--font-display);
+  font-size: var(--step--1);
+  color: var(--cyan);
+}
+
+/* ---- Submit & status --------------------------------------------------- */
+.form button[type="submit"] {
+  justify-self: start;
+}
+
+.form-status {
+  min-height: 1.4em;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--step--2);
+  color: var(--amber);
+}
+
+.form-status:not(:empty)::before {
+  content: "\25B6\00A0";
+  color: var(--lime);
+}
+
+.form-status:not(:empty) {
+  animation: status-in var(--dur) var(--ease-out) both;
+}
+
+.form-note {
+  margin: 0;
+  font-size: var(--step--1);
+  color: var(--text-faint);
+}
+
+@media (min-width: 40rem) {
+  .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .form-grid .field--full {
+    grid-column: 1 / -1;
+  }
+}

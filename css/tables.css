@@ -1,0 +1,122 @@
+/* ==========================================================================
+   Retrocadia — tables
+   ========================================================================== */
+
+.table-scroll {
+  overflow-x: auto;
+  border-radius: var(--radius);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  margin-bottom: 1rem;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: var(--step--2);
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+  color: var(--cyan);
+}
+
+caption::before {
+  content: "\25B8\00A0";
+  color: var(--magenta);
+}
+
+th,
+td {
+  padding: 0.9rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+thead th {
+  font-family: var(--font-display);
+  font-size: var(--step--2);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  border-bottom: 1px solid var(--line-strong);
+}
+
+tbody th[scope="row"] {
+  font-family: var(--font-body);
+  font-weight: 650;
+  color: var(--amber);
+  white-space: nowrap;
+}
+
+tbody td {
+  color: var(--text-soft);
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--line-soft);
+  transition: background var(--dur-fast) var(--ease-out);
+}
+
+tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--ink-800) 55%, transparent);
+}
+
+tbody tr:hover {
+  background: color-mix(in srgb, var(--cyan) 10%, transparent);
+}
+
+tbody tr:hover td {
+  color: var(--text);
+}
+
+tbody tr:last-child {
+  border-bottom: 0;
+}
+
+td strong {
+  color: var(--lime);
+}
+
+/* ---- Stacked, card-like table on phones -------------------------------- */
+@media (max-width: 39.99rem) {
+  .spec-table,
+  .spec-table tbody,
+  .spec-table tr,
+  .spec-table th,
+  .spec-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .spec-table {
+    border-collapse: separate;
+  }
+
+  .spec-table thead {
+    display: none;
+  }
+
+  .spec-table tbody tr {
+    margin-bottom: 0.7rem;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--ink-800);
+  }
+
+  .spec-table tbody tr:hover {
+    background: var(--ink-800);
+  }
+
+  .spec-table th[scope="row"] {
+    padding: 0.6rem 0.9rem;
+    background: var(--ink-700);
+    white-space: normal;
+  }
+
+  .spec-table td {
+    padding: 0.65rem 0.9rem;
+  }
+}

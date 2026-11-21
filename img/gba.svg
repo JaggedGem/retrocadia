@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Stylised illustration of a Game Boy Advance handheld">
+  <defs>
+    <linearGradient id="gbaBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#191c28"/><stop offset="1" stop-color="#0a0b12"/>
+    </linearGradient>
+    <pattern id="gbaGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+    <linearGradient id="gbaShell" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6a5ae0"/><stop offset="1" stop-color="#3d327f"/>
+    </linearGradient>
+    <linearGradient id="gbaScreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2a4d"/><stop offset="1" stop-color="#0c1226"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="320" fill="url(#gbaBg)"/>
+  <rect width="480" height="320" fill="url(#gbaGrid)"/>
+  <ellipse cx="240" cy="150" rx="210" ry="120" fill="#6a5ae0" opacity="0.2"/>
+
+  <path d="M96 96 h288 q40 60 0 128 h-288 q-40 -64 0 -128 z" fill="url(#gbaShell)"/>
+  <rect x="170" y="98" width="140" height="112" rx="10" fill="#2a2560"/>
+  <rect x="180" y="108" width="120" height="92" rx="6" fill="url(#gbaScreen)"/>
+  <g fill="#2fe6ff" opacity="0.85">
+    <rect x="196" y="150" width="10" height="10"/>
+    <rect x="212" y="142" width="18" height="10"/>
+    <rect x="236" y="150" width="10" height="10"/>
+    <rect x="256" y="134" width="14" height="10"/>
+  </g>
+  <rect x="180" y="108" width="120" height="92" rx="6" fill="none" stroke="#6a5ae0" stroke-opacity="0.6" stroke-width="2"/>
+
+  <g fill="#2a2560">
+    <rect x="112" y="140" width="16" height="44" rx="4"/>
+    <rect x="96" y="156" width="48" height="14" rx="4"/>
+  </g>
+  <circle cx="352" cy="150" r="13" fill="#2a2560"/>
+  <circle cx="376" cy="168" r="13" fill="#2a2560"/>
+  <rect x="306" y="176" width="26" height="10" rx="5" fill="#2a2560"/>
+  <rect x="338" y="184" width="26" height="10" rx="5" fill="#2a2560"/>
+  <rect x="206" y="220" width="70" height="8" rx="4" fill="#2a2560"/>
+</svg>

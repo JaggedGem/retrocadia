@@ -1,362 +1,182 @@
-<!DOCTYPE html>
-<html lang="ro">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Retrocadia: un mic ghid al jocurilor retro. Descoperă jocuri clasice, istoria consolelor și sfaturi pentru prima ta aventură.">
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/theme.js"></script>
-    <title>Retrocadia — Jocuri mici. Amintiri mari.</title>
+      content="Retrocadia is an atmospheric museum of classic video game hardware, formats and the small rituals of play."
+    />
+    <meta name="theme-color" content="#070811" />
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Retrocadia | The Retro Games Museum</title>
   </head>
-  <body>
-    <a class="skip-link" href="#continut">Sari la conținut</a>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="site-header">
-      <div class="container header-inner">
-        <a class="logo" href="index.html"
-          ><img
-            src="assets/favicon.svg"
-            alt=""
-            width="32"
-            height="32">retrocadia</a
-        >
-        <div class="header-tools">
-          <nav aria-label="Navigare principală">
+      <input class="nav-input" type="checkbox" id="nav-toggle" />
+      <div class="site-header__inner">
+        <a class="brand" href="index.html">RETROCADIA</a>
+        <label class="nav-toggle" for="nav-toggle">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+        </label>
+        <nav class="site-nav" aria-label="Primary">
+          <div class="site-nav__panel">
             <ul class="nav-list">
-              <li><a href="index.html" aria-current="page">Acasă</a></li>
-              <li><a href="games/index.html">Jocuri</a></li>
-              <li><a href="consoles/index.html">Console</a></li>
-              <li><a href="pages/istorie.html">Istorie</a></li>
-              <li><a href="pages/ghid.html">Ghid</a></li>
-              <li><a href="pages/propune.html">Propune</a></li>
+              <li><a href="index.html" aria-current="page">Home</a></li>
+              <li><a href="consoles.html">Consoles</a></li>
+              <li><a href="contribute.html">Contribute</a></li>
             </ul>
-          </nav>
-          <button
-            class="theme-toggle"
-            type="button"
-            aria-label="Mod întunecat"
-            title="Activează modul întunecat"
-            aria-pressed="false"
-            hidden
-          >
-            <svg
-              class="theme-icon theme-icon-moon"
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path d="M21 12.79A9 9 0 0 1 11.21 3 9 9 0 1 0 21 12.79Z"></path>
-            </svg>
-            <svg
-              class="theme-icon theme-icon-sun"
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <circle cx="12" cy="12" r="4"></circle>
-              <path
-                d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
-              ></path>
-            </svg>
-          </button>
-        </div>
+          </div>
+        </nav>
       </div>
     </header>
-    <main id="continut">
-      <section class="hero" aria-labelledby="titlu">
-        <div class="container hero-grid">
-          <div>
-            <p class="eyebrow light">O lume întreagă, în câțiva pixeli</p>
-            <h1 id="titlu">Jocuri mici.<br><span>Amintiri mari.</span></h1>
-            <p class="intro">
-              Înainte de lumi uriașe și grafică realistă, existau un controller,
-              câteva butoane și încă o încercare. Redescoperă jocurile care au
-              făcut istorie.
-            </p>
-            <div class="actions">
-              <a class="button" href="games/index.html">Descoperă jocurile</a
-              ><a class="text-link" href="pages/ghid.html">De unde încep?</a>
-            </div>
-            <p class="hero-note">
-              8 și 16 biți. Idei simple. Distracție fără termen de expirare.
-            </p>
-          </div>
-          <figure class="console">
-            <div class="console-top">
-              <span>PLAYER 01</span><span>● READY</span>
-            </div>
-            <div class="screen">
-              <img
-                src="assets/images/super-mario-bros.png"
-                alt="Mario, blocuri de cărămidă și un Goomba în Super Mario Bros. pe NES"
-                width="256"
-                height="240"
-                fetchpriority="high">
-            </div>
-            <figcaption>
-              <div><strong>Super Mario Bros.</strong>NES · 1985 · Nintendo</div>
-              <div class="controls" aria-hidden="true">
-                <span></span><span></span>
-              </div>
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-      <div class="ticker">
-        <div class="container">
-          <span>6 jocuri de descoperit</span><span>5 console legendare</span
-          ><span>O pasiune care rămâne</span>
-        </div>
-      </div>
-      <section class="section container" aria-labelledby="clasice">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Selecția Retrocadia / 01</p>
-            <h2 id="clasice">Un început bun. Trei clasice.</h2>
-            <p>
-              O săritură, un inel, o piesă potrivită. Uneori, atât îți trebuie.
-            </p>
-          </div>
-          <a class="text-link" href="games/index.html">Toată colecția</a>
-        </div>
-        <div class="cards">
-          <article class="game-card">
-            <a class="game-image" href="games/super-mario-bros.html"
-              ><img
-                src="assets/images/super-mario-bros.png"
-                alt="Mario în primul nivel din Super Mario Bros., cu platforme și blocuri"
-                width="256"
-                height="240"
-                loading="lazy"></a>
-            <div class="card-body">
-              <div class="card-meta">
-                <span>NES · 1985</span><span class="tag">Platformer</span>
-              </div>
-              <h3>
-                <a href="games/super-mario-bros.html">Super Mario Bros.</a>
-              </h3>
-              <p>
-                Prima ciupercă, primul salt, primul secret. O lecție de design
-                care încă funcționează.
-              </p>
-              <a class="text-link" href="games/super-mario-bros.html"
-                >Intră în Mushroom Kingdom</a
-              >
-            </div>
-          </article>
-          <article class="game-card">
-            <a class="game-image lavender" href="games/sonic-the-hedgehog.html"
-              ><img
-                src="assets/images/sonic-the-hedgehog.png"
-                alt="Sonic în Green Hill Zone, cu iarbă verde și teren în carouri"
-                width="320"
-                height="224"
-                loading="lazy"></a>
-            <div class="card-body">
-              <div class="card-meta">
-                <span>MEGA DRIVE · 1991</span
-                ><span class="tag purple">Viteză</span>
-              </div>
-              <h3>
-                <a href="games/sonic-the-hedgehog.html">Sonic the Hedgehog</a>
-              </h3>
-              <p>
-                Dealuri verzi, bucle spectaculoase și inele aurii. Un alt fel de
-                a explora un nivel.
-              </p>
-              <a class="text-link" href="games/sonic-the-hedgehog.html"
-                >Pornește prin Green Hill</a
-              >
-            </div>
-          </article>
-          <article class="game-card">
-            <a class="game-image peach" href="games/tetris.html"
-              ><img
-                src="assets/images/tetris.png"
-                alt="Tablă de Tetris pe NES, cu piese geometrice albastre"
-                width="256"
-                height="240"
-                loading="lazy"></a>
-            <div class="card-body">
-              <div class="card-meta">
-                <span>NES · 1989</span><span class="tag orange">Puzzle</span>
-              </div>
-              <h3><a href="games/tetris.html">Tetris</a></h3>
-              <p>
-                Șapte forme și o regulă ușor de înțeles. Provocarea e să rămâi
-                calm când ritmul crește.
-              </p>
-              <a class="text-link" href="games/tetris.html"
-                >Găsește piesa potrivită</a
-              >
-            </div>
-          </article>
-        </div>
-      </section>
-      <section class="section container" aria-labelledby="de-ce">
-        <div class="split">
-          <div>
-            <p class="eyebrow">Mai mult decât nostalgie / 02</p>
-            <h2 id="de-ce">De ce ne întoarcem<br>la jocurile retro?</h2>
-            <p>
-              Un joc retro nu este doar un joc vechi. Este o fereastră spre o
-              perioadă în care memoria era limitată, iar ideile trebuiau să fie
-              ingenioase.
-            </p>
-            <ul class="checklist">
-              <li>
-                <strong>Reguli clare:</strong> înțelegi repede ce ai de făcut.
-              </li>
-              <li>
-                <strong>Provocări reale:</strong> progresul vine prin observație
-                și exercițiu.
-              </li>
-              <li>
-                <strong>Identitate vizuală:</strong> recunoști un personaj din
-                câțiva pixeli.
-              </li>
-              <li>
-                <strong>Muzică memorabilă:</strong> melodii construite cu puține
-                canale sonore.
-              </li>
-            </ul>
-            <a class="text-link" href="pages/istorie.html"
-              >Vezi cum a început totul</a
+
+    <main class="site-main" id="main">
+      <section class="hero reveal" aria-labelledby="welcome-heading">
+        <div class="hero__copy">
+          <p class="eyebrow">Archive terminal 01 / online exhibit</p>
+          <h1 id="welcome-heading">A museum for the games that raised us.</h1>
+          <p class="hero__lead">
+            Retrocadia preserves the machines, formats and small rituals that
+            made digital play feel magical. Enter the archive and browse the
+            hardware behind the memories.
+          </p>
+          <div class="hero__actions">
+            <a class="button" href="consoles.html">Enter the hardware hub</a>
+            <a class="button button--secondary" href="#timeline"
+              >View the timeline</a
             >
           </div>
-          <div>
-            <h3>Trei pași până la primul „high score”</h3>
-            <ol class="steps">
-              <li>
-                <h3>Alege ceva pe gustul tău</h3>
-                <p>
-                  Platforme pentru explorare, puzzle pentru răbdare sau lupte
-                  pentru competiție.
-                </p>
-              </li>
-              <li>
-                <h3>Învață câteva butoane</h3>
-                <p>
-                  Începe cu mișcarea și acțiunea principală. Nu trebuie să știi
-                  totul din prima.
-                </p>
-              </li>
-              <li>
-                <h3>Mai încearcă o dată</h3>
-                <p>
-                  O viață pierdută e o informație câștigată. Observă,
-                  adaptează-te și revino.
-                </p>
-              </li>
-            </ol>
+          <ul class="hero__stats">
+            <li class="stat">
+              <strong class="stat__value">6</strong
+              ><span class="stat__label">Systems on show</span>
+            </li>
+            <li class="stat">
+              <strong class="stat__value">4</strong
+              ><span class="stat__label">Eras mapped</span>
+            </li>
+            <li class="stat">
+              <strong class="stat__value">1983</strong
+              ><span class="stat__label">Where the log starts</span>
+            </li>
+          </ul>
+        </div>
+        <figure class="hero__art">
+          <img
+            src="img/hero-crt.svg"
+            width="560"
+            height="420"
+            alt="A CRT television glowing with a pixel-art landscape while a console plays beneath it"
+          />
+          <figcaption>
+            Exhibit hall, west wing — the after-hours glow.
+          </figcaption>
+        </figure>
+      </section>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <div class="ticker__group">
+            <span>Cartridge shelf open</span>
+            <span>CRT warmed up</span>
+            <span>Save file intact</span>
+            <span>Four-player bracket</span>
+            <span>Insert coin</span>
+          </div>
+          <div class="ticker__group">
+            <span>Cartridge shelf open</span>
+            <span>CRT warmed up</span>
+            <span>Save file intact</span>
+            <span>Four-player bracket</span>
+            <span>Insert coin</span>
           </div>
         </div>
-      </section>
-      <section class="section container" aria-labelledby="alege">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Alege-ți aventura / 03</p>
-            <h2 id="alege">Ce ai chef să joci?</h2>
-            <p>
-              Un punct de pornire, în funcție de felul în care îți place să te
-              joci.
-            </p>
-          </div>
+      </div>
+
+      <section class="section" id="timeline" aria-labelledby="timeline-heading">
+        <div class="section-heading reveal">
+          <h2 id="timeline-heading">The eras, logged</h2>
+          <p>Four checkpoints in the living-room arcade.</p>
         </div>
-        <section
-          class="table-wrap"
-          tabindex="0"
-          aria-label="Tabel cu derulare orizontală"
-        >
-          <table>
-            <caption>
-              Recomandări pentru prima sesiune
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">Dacă îți place…</th>
-                <th scope="col">Încearcă</th>
-                <th scope="col">Ce vei exersa</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Să treci obstacole</th>
-                <td>
-                  <a href="games/super-mario-bros.html">Super Mario Bros.</a>
-                </td>
-                <td>Precizie și ritm</td>
-              </tr>
-              <tr>
-                <th scope="row">Să rezolvi puzzle-uri</th>
-                <td><a href="games/tetris.html">Tetris</a></td>
-                <td>Planificare și reacție</td>
-              </tr>
-              <tr>
-                <th scope="row">Să descoperi trasee rapide</th>
-                <td>
-                  <a href="games/sonic-the-hedgehog.html">Sonic the Hedgehog</a>
-                </td>
-                <td>Impuls și explorare</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+        <ol class="timeline">
+          <li class="reveal">
+            <strong>1983 / The reset</strong
+            ><span
+              >Dedicated home hardware finds its second act, trading novelty for
+              a new kind of neighbourhood ritual.</span
+            >
+          </li>
+          <li class="reveal">
+            <strong>1990 / 16-bit glow</strong
+            ><span
+              >Colour, sound and character design become bold enough to live in
+              memory long after the power switch clicks off.</span
+            >
+          </li>
+          <li class="reveal">
+            <strong>1994 / The polygon arrives</strong
+            ><span
+              >Optical media opens the door to cinematic worlds, full-motion
+              experiments and a new vocabulary of 3D play.</span
+            >
+          </li>
+          <li class="reveal">
+            <strong>2000 / The networked room</strong
+            ><span
+              >Online play begins moving the social centre of gaming from one
+              couch toward an entire connected world.</span
+            >
+          </li>
+        </ol>
       </section>
-      <section class="section container" aria-labelledby="gata">
+
+      <section class="section reveal" aria-labelledby="visit-heading">
         <div class="cta">
           <div>
-            <p class="eyebrow light">Press start</p>
-            <h2 id="gata">Primul nivel te așteaptă.</h2>
+            <p class="eyebrow">Plan a visit</p>
+            <h2 id="visit-heading">Bring a memory; leave a record.</h2>
             <p>
-              Console, controllere și câteva sfaturi pentru un început relaxat.
+              The archive grows through the people who were there. Add a game, a
+              machine or a story, and the volunteer archivists will consider it
+              for a future exhibit.
             </p>
           </div>
-          <a class="button" href="pages/ghid.html">Deschide ghidul</a>
+          <div class="cta__actions">
+            <a class="button" href="contribute.html">Contribute a record</a>
+            <a class="button button--secondary" href="consoles.html"
+              >Browse consoles</a
+            >
+          </div>
         </div>
       </section>
     </main>
+
     <footer class="site-footer">
-      <div class="container">
-        <div class="footer-top">
-          <div>
-            <a class="logo" href="index.html"
-              ><img
-                src="assets/favicon.svg"
-                alt=""
-                width="32"
-                height="32">retrocadia</a
-            >
-            <p>Un mic loc pentru marile jocuri de altădată.</p>
-          </div>
-          <nav class="footer-links" aria-label="Navigare secundară">
-            <a href="games/index.html">Jocuri</a
-            ><a href="consoles/index.html">Console</a
-            ><a href="pages/propune.html">Propune un joc</a
-            ><a href="pages/ghid.html#resurse">Resurse &amp; media</a>
-          </nav>
+      <div class="site-footer__inner">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">RETROCADIA</a>
+          <p>
+            A fan-built digital museum for the machines, formats and rituals of
+            classic play.
+          </p>
         </div>
-        <div class="footer-bottom">
-          <p>© 2026 Retrocadia</p>
-          <p>Jocurile și imaginile aparțin creatorilor lor.</p>
-        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <h2>Visit</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="consoles.html">Console index</a></li>
+            <li><a href="contribute.html">Contribute a record</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 Retrocadia &middot; an educational archive.</p>
+        <a class="to-top" href="#top">Back to top</a>
       </div>
     </footer>
   </body>

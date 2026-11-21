@@ -1,0 +1,4 @@
+# Local preview artifacts and scratch files
+.preview/
+*.log
+.DS_Store

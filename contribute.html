@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Add a game, machine or memory to the Retrocadia archive and submit it for a future exhibit."
+    />
+    <meta name="theme-color" content="#070811" />
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Contribute | Retrocadia</title>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <input class="nav-input" type="checkbox" id="nav-toggle" />
+      <div class="site-header__inner">
+        <a class="brand" href="index.html">RETROCADIA</a>
+        <label class="nav-toggle" for="nav-toggle">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+        </label>
+        <nav class="site-nav" aria-label="Primary">
+          <div class="site-nav__panel">
+            <ul class="nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="consoles.html">Consoles</a></li>
+              <li>
+                <a href="contribute.html" aria-current="page">Contribute</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main" id="main">
+      <header class="page-intro">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Contribute</li>
+          </ol>
+        </nav>
+        <p class="eyebrow">Archive terminal / incoming records</p>
+        <h1>Add to the collection</h1>
+        <p>
+          Every museum needs a memory from the people who were there. Submit a
+          game, machine or story for a future exhibit review.
+        </p>
+      </header>
+
+      <div class="split">
+        <section class="panel" aria-labelledby="form-heading">
+          <h2 id="form-heading">New game record</h2>
+          <p>
+            Fields marked with an asterisk are required. We read every
+            submission.
+          </p>
+          <form class="form" id="contribution-form">
+            <div class="form-grid">
+              <div class="field field--full">
+                <label for="game-title">Game title</label>
+                <input
+                  id="game-title"
+                  name="game-title"
+                  type="text"
+                  required
+                  minlength="2"
+                  placeholder="e.g. Chrono Trigger"
+                />
+                <p class="field__hint">The name as it appeared on the box.</p>
+              </div>
+              <div class="field">
+                <label for="platform">Platform</label>
+                <div class="select">
+                  <select id="platform" name="platform" required>
+                    <option value="">Select a platform</option>
+                    <option>Super Nintendo</option>
+                    <option>PlayStation</option>
+                    <option>Sega Genesis</option>
+                    <option>Nintendo 64</option>
+                    <option>Dreamcast</option>
+                    <option>Game Boy Advance</option>
+                    <option>Other archive entry</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="year">Release year</label>
+                <input
+                  id="year"
+                  name="year"
+                  type="number"
+                  min="1970"
+                  max="2026"
+                  step="1"
+                  required
+                  placeholder="1995"
+                />
+                <p class="field__hint">Between 1970 and 2026.</p>
+              </div>
+              <div class="field field--full">
+                <label for="story">Your archive note</label>
+                <textarea
+                  id="story"
+                  name="story"
+                  required
+                  minlength="12"
+                  placeholder="What made this game stay with you?"
+                ></textarea>
+              </div>
+              <div class="field field--full">
+                <label for="photo">Attach a photo</label>
+                <input id="photo" name="photo" type="file" accept="image/*" />
+                <p class="field__hint">
+                  Optional. A cartridge, a screen or a shelf will do.
+                </p>
+              </div>
+            </div>
+
+            <fieldset>
+              <legend>Before you transmit</legend>
+              <label class="choice" for="ownership">
+                <input
+                  id="ownership"
+                  name="ownership"
+                  type="checkbox"
+                  required
+                />
+                <span
+                  >This record is mine to share and may be published in the
+                  archive.</span
+                >
+              </label>
+            </fieldset>
+
+            <button class="button" type="submit">Transmit record</button>
+            <p
+              class="form-status"
+              id="form-status"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </form>
+        </section>
+
+        <aside class="panel" aria-labelledby="guide-heading">
+          <h2 id="guide-heading">How records are read</h2>
+          <ul class="footer-nav">
+            <li><a href="#form-heading">Name the game exactly</a></li>
+            <li><a href="#form-heading">Note the console it lived on</a></li>
+            <li><a href="#form-heading">Write the memory, not a review</a></li>
+            <li><a href="#form-heading">Photos help but never block</a></li>
+          </ul>
+          <hr />
+          <dl class="facts">
+            <div>
+              <dt>Review time</dt>
+              <dd>~2 weeks</dd>
+            </div>
+            <div>
+              <dt>Volunteers</dt>
+              <dd>7</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">RETROCADIA</a>
+          <p>
+            A fan-built digital museum for the machines, formats and rituals of
+            classic play.
+          </p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <h2>Visit</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="consoles.html">Console index</a></li>
+            <li><a href="contribute.html">Contribute a record</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 Retrocadia &middot; an educational archive.</p>
+        <a class="to-top" href="#top">Back to top</a>
+      </div>
+    </footer>
+    <script src="js/script.js" defer></script>
+  </body>
+</html>

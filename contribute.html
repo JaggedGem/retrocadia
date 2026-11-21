@@ -1,35 +1,35 @@
 <!doctype html>
-<html lang="en">
+<html lang="ro">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Add a game, machine or memory to the Retrocadia archive and submit it for a future exhibit."
+      content="Adaugă un joc, mașină sau amintire la arhiva Retrocadia și trimite-o pentru o expoziție viitoare."
     />
     <meta name="theme-color" content="#070811" />
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Contribute | Retrocadia</title>
+    <title>Propune | Retrocadia</title>
   </head>
   <body id="top">
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">Sari la conținut</a>
 
     <header class="site-header">
       <input class="nav-input" type="checkbox" id="nav-toggle" />
       <div class="site-header__inner">
         <a class="brand" href="index.html">RETROCADIA</a>
         <label class="nav-toggle" for="nav-toggle">
-          <span class="sr-only">Toggle navigation</span>
+          <span class="sr-only">Comutare navigare</span>
           <span class="nav-toggle__bar" aria-hidden="true"></span>
         </label>
-        <nav class="site-nav" aria-label="Primary">
+        <nav class="site-nav" aria-label="Primară">
           <div class="site-nav__panel">
             <ul class="nav-list">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="consoles.html">Consoles</a></li>
+              <li><a href="index.html">Acasă</a></li>
+              <li><a href="consoles.html">Console</a></li>
               <li>
-                <a href="contribute.html" aria-current="page">Contribute</a>
+                <a href="contribute.html" aria-current="page">Propune</a>
               </li>
             </ul>
           </div>
@@ -39,31 +39,31 @@
 
     <main class="site-main" id="main">
       <header class="page-intro">
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <nav class="breadcrumbs" aria-label="Măr de navigare">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li aria-current="page">Contribute</li>
+            <li><a href="index.html">Acasă</a></li>
+            <li aria-current="page">Propune</li>
           </ol>
         </nav>
-        <p class="eyebrow">Archive terminal / incoming records</p>
-        <h1>Add to the collection</h1>
+        <p class="eyebrow">Terminal de arhivă / înregistrări de intrare</p>
+        <h1>Adaugă la colecție</h1>
         <p>
-          Every museum needs a memory from the people who were there. Submit a
-          game, machine or story for a future exhibit review.
+          Fiecare muzeu are nevoie de o amintire de la oamenii care au fost acolo.
+          Trimite un joc, mașină sau poveste pentru revizuire de expoziție viitoare.
         </p>
       </header>
 
       <div class="split">
         <section class="panel" aria-labelledby="form-heading">
-          <h2 id="form-heading">New game record</h2>
+          <h2 id="form-heading">Înregistrare joc nou</h2>
           <p>
-            Fields marked with an asterisk are required. We read every
-            submission.
+            Câmpurile marcate cu un asterisc sunt obligatorii. Citim fiecare
+            trimitere.
           </p>
           <form class="form" id="contribution-form">
             <div class="form-grid">
               <div class="field field--full">
-                <label for="game-title">Game title</label>
+                <label for="game-title">Titlu joc</label>
                 <input
                   id="game-title"
                   name="game-title"
@@ -72,25 +72,25 @@
                   minlength="2"
                   placeholder="e.g. Chrono Trigger"
                 />
-                <p class="field__hint">The name as it appeared on the box.</p>
+                <p class="field__hint">Numele cum a apărut pe cutie.</p>
               </div>
               <div class="field">
-                <label for="platform">Platform</label>
+                <label for="platform">Platformă</label>
                 <div class="select">
                   <select id="platform" name="platform" required>
-                    <option value="">Select a platform</option>
+                    <option value="">Alege o platformă</option>
                     <option>Super Nintendo</option>
                     <option>PlayStation</option>
                     <option>Sega Genesis</option>
                     <option>Nintendo 64</option>
                     <option>Dreamcast</option>
                     <option>Game Boy Advance</option>
-                    <option>Other archive entry</option>
+                    <option>Altă intrare de arhivă</option>
                   </select>
                 </div>
               </div>
               <div class="field">
-                <label for="year">Release year</label>
+                <label for="year">Anul lansării</label>
                 <input
                   id="year"
                   name="year"
@@ -101,29 +101,29 @@
                   required
                   placeholder="1995"
                 />
-                <p class="field__hint">Between 1970 and 2026.</p>
+                <p class="field__hint">Între 1970 și 2026.</p>
               </div>
               <div class="field field--full">
-                <label for="story">Your archive note</label>
+                <label for="story">Notă ta de arhivă</label>
                 <textarea
                   id="story"
                   name="story"
                   required
                   minlength="12"
-                  placeholder="What made this game stay with you?"
+                  placeholder="Ce te-a ținut legat de acest joc?"
                 ></textarea>
               </div>
               <div class="field field--full">
-                <label for="photo">Attach a photo</label>
+                <label for="photo">Atașează o fotografie</label>
                 <input id="photo" name="photo" type="file" accept="image/*" />
                 <p class="field__hint">
-                  Optional. A cartridge, a screen or a shelf will do.
+                  Opțional. Un cartuș, un ecran sau o peta vor face treaba.
                 </p>
               </div>
             </div>
 
             <fieldset>
-              <legend>Before you transmit</legend>
+              <legend>Înainte de transmitere</legend>
               <label class="choice" for="ownership">
                 <input
                   id="ownership"
@@ -132,13 +132,13 @@
                   required
                 />
                 <span
-                  >This record is mine to share and may be published in the
-                  archive.</span
+                  >Această înregistrare este mea de împărtășit și poate fi publicată în
+                  arhivă.</span
                 >
               </label>
             </fieldset>
 
-            <button class="button" type="submit">Transmit record</button>
+            <button class="button" type="submit">Transmite înregistrarea</button>
             <p
               class="form-status"
               id="form-status"
@@ -149,21 +149,21 @@
         </section>
 
         <aside class="panel" aria-labelledby="guide-heading">
-          <h2 id="guide-heading">How records are read</h2>
+          <h2 id="guide-heading">Cum sunt citite înregistrările</h2>
           <ul class="footer-nav">
-            <li><a href="#form-heading">Name the game exactly</a></li>
-            <li><a href="#form-heading">Note the console it lived on</a></li>
-            <li><a href="#form-heading">Write the memory, not a review</a></li>
-            <li><a href="#form-heading">Photos help but never block</a></li>
+            <li><a href="#form-heading">Numește jocul exact</a></li>
+            <li><a href="#form-heading">Notează consola pe care a trăit</a></li>
+            <li><a href="#form-heading">Scrie amintirea, nu o recenzie</a></li>
+            <li><a href="#form-heading">Fotografiile ajută dar nu blochează</a></li>
           </ul>
           <hr />
           <dl class="facts">
             <div>
-              <dt>Review time</dt>
-              <dd>~2 weeks</dd>
+              <dt>Timp de revizuire</dt>
+              <dd>~2 săptămâni</dd>
             </div>
             <div>
-              <dt>Volunteers</dt>
+              <dt>Voluntari</dt>
               <dd>7</dd>
             </div>
           </dl>
@@ -176,22 +176,22 @@
         <div class="footer-brand">
           <a class="brand" href="index.html">RETROCADIA</a>
           <p>
-            A fan-built digital museum for the machines, formats and rituals of
-            classic play.
+            Un muzeu digital construit de fanii pentru mașinile, formatele și
+            ritualurile jocului clasic.
           </p>
         </div>
-        <nav class="footer-nav" aria-label="Footer">
-          <h2>Visit</h2>
+        <nav class="footer-nav" aria-label="Păr">
+          <h2>Vizită</h2>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="consoles.html">Console index</a></li>
-            <li><a href="contribute.html">Contribute a record</a></li>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="consoles.html">Indexul consolelor</a></li>
+            <li><a href="contribute.html">Adaugă o înregistrare</a></li>
           </ul>
         </nav>
       </div>
       <div class="site-footer__bottom">
-        <p>&copy; 2026 Retrocadia &middot; an educational archive.</p>
-        <a class="to-top" href="#top">Back to top</a>
+        <p>&copy; 2026 Retrocadia &middot; o arhivă educativă.</p>
+        <a class="to-top" href="#top">Înapoi sus</a>
       </div>
     </footer>
     <script src="js/script.js" defer></script>

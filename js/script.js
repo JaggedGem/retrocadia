@@ -1,27 +1,27 @@
 /*
- * Retrocadia — the only script on the site.
+ * Retrocadia — singurul script al site-ului.
  *
- * Everything else (the collapsible navigation, the scroll reveals, hover and
- * focus states) is handled by HTML and CSS alone.
- * This file adds two small, optional enhancements and the pages work without
- * it: the mystery-exhibit picker and the contribution confirmation.
+ * Tot restul (navigația colapsabilă, revelațiile la scroll, stările de hover și
+ * focus) este gestionat de HTML și CSS singure.
+ * Acest fișier adaugă două îmbunătățiri mici, opționale și paginile funcționează
+ * fără el: picker-ul de expoziție misterioasă și confirmația de contribuție.
  */
 (() => {
   "use strict";
 
-  /* Mystery exhibit picker on consoles.html */
+  /* Picker expoziție misterioasă pe consoles.html */
   const surprise = document.querySelector("#surprise-console");
   const signalName = document.querySelector("#signal-console");
   const signalDetail = document.querySelector("#signal-detail");
 
   if (surprise && signalName && signalDetail) {
     const exhibits = [
-      { name: "SUPER NES", detail: "1990 // CARTRIDGE // 16-BIT" },
-      { name: "PLAYSTATION", detail: "1994 // CD-ROM // 32-BIT" },
-      { name: "SEGA GENESIS", detail: "1988 // CARTRIDGE // 16-BIT" },
-      { name: "NINTENDO 64", detail: "1996 // CARTRIDGE // 64-BIT" },
-      { name: "DREAMCAST", detail: "1998 // GD-ROM // 128-BIT" },
-      { name: "GAME BOY ADVANCE", detail: "2001 // GAME PAK // HANDHELD" },
+      { name: "SUPER NES", detail: "1990 // CARȚUȘ // 16-BITĂ" },
+      { name: "PLAYSTATION", detail: "1994 // CD-ROM // 32-BITĂ" },
+      { name: "SEGA GENESIS", detail: "1988 // CARȚUȘ // 16-BITĂ" },
+      { name: "NINTENDO 64", detail: "1996 // CARȚUȘ // 64-BITĂ" },
+      { name: "DREAMCAST", detail: "1998 // GD-ROM // 128-BITĂ" },
+      { name: "GAME BOY ADVANCE", detail: "2001 // GAME PAK // PORTABIL" },
     ];
 
     let previous = -1;
@@ -35,11 +35,11 @@
 
       signalName.textContent = exhibits[index].name;
       signalDetail.textContent = exhibits[index].detail;
-      surprise.textContent = "Scan another";
+      surprise.textContent = "Scanează altul";
     });
   }
 
-  /* Contribution confirmation on contribute.html */
+  /* Confirmație contribuție pe contribute.html */
   const form = document.querySelector("#contribution-form");
   const status = document.querySelector("#form-status");
 
@@ -52,7 +52,7 @@
       }
 
       const title = String(form.elements["game-title"].value).trim();
-      status.textContent = `"${title}" received. The archive team will review it shortly.`;
+      status.textContent = `"${title}" primit. Echipa de arhivă îl va revizui curând.`;
       form.reset();
     });
   }
